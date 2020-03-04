@@ -9,8 +9,8 @@ InputManager:
     m_Name: 1_Horizontal
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: a
-    positiveButton: d
+    negativeButton: d
+    positiveButton: g
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -41,8 +41,8 @@ InputManager:
     m_Name: 1_Vertical
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: s
-    positiveButton: w
+    negativeButton: f
+    positiveButton: r
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -74,7 +74,7 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: e
+    positiveButton: a
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -90,7 +90,7 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: mouse 1
+    positiveButton: left ctrl
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -106,7 +106,7 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: q
+    positiveButton: s
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -122,7 +122,7 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: mouse 1
+    positiveButton: left alt
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
