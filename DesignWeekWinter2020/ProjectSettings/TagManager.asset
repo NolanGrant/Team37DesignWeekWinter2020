@@ -6,6 +6,7 @@ TagManager:
   tags:
   - RightArm
   - LeftArm
+  - EnemySpawn
   layers:
   - Default
   - TransparentFX
