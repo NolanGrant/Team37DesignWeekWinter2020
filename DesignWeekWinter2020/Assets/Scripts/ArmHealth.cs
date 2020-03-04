@@ -14,6 +14,10 @@ public class ArmHealth : MonoBehaviour
     public GameObject armSegmentExplosionPrefab;
     public GameObject[] armSegments;
 
+    public float disabledDuration = 3f;
+    public Color disabledColor;
+    public SpriteRenderer[] disabledEffectedSprites;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +35,11 @@ public class ArmHealth : MonoBehaviour
             foreach(GameObject armSegment in armSegments)
             {
                 Instantiate(armSegmentExplosionPrefab, armSegment.transform.position, Quaternion.identity);
-                Destroy(armSegment);
+                foreach(SpriteRenderer sprite in disabledEffectedSprites)
+                {
+                    sprite.color = disabledColor;
+                }
+                //Destroy(armSegment);
             }
         }
     }
