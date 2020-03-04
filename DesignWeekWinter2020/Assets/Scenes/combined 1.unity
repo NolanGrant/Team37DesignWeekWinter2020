@@ -519,7 +519,7 @@ PrefabInstance:
     - target: {fileID: 8950137347935920248, guid: 0cd599f7d8a0ec04abd6285ebb23b8ab,
         type: 3}
       propertyPath: mostDifficultLine
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8950137347935920248, guid: 0cd599f7d8a0ec04abd6285ebb23b8ab,
         type: 3}
