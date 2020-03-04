@@ -46,6 +46,7 @@ public class ArmControl : MonoBehaviour
         {
             if (inputDirection.magnitude > 0.1f)
             {
+                print("move arm");
                 targetHand.velocity = (inputDirection * TargetHandMovementForce);
             }
         }
