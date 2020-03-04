@@ -22,11 +22,18 @@ public class EnemyMovement : MonoBehaviour
     public GameObject explosionPrefab;
     public GameObject scorePop;
 
+    private WaveSetUp Spawner;
+
     Vector3 startingPos;
+
+    private Transform EndPoint;
     // Start is called before the first frame update
     void Start()
     {
         startingPos = transform.position;
+        Spawner = GameObject.Find("Spawner").GetComponent<WaveSetUp>();
+        Spawner.IncreaseAliveEnemies();
+        EndPoint = GameObject.Find("EndPoint").transform;
 
     }
 
@@ -34,6 +41,7 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         MoveDown();
+        CheckOutOfBounds();
     }
     void MoveDown()
     {
@@ -59,6 +67,23 @@ public class EnemyMovement : MonoBehaviour
         score.GetComponent<RectTransform>().localScale = new Vector3(1,1,1);
         score.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform);
         Score.score += 50;
+        Spawner.DecreaseAliveEnemies();
         Destroy(this.gameObject);
     }
+
+    private void CheckOutOfBounds() 
+    {
+        if(EndPoint == null)
+        {
+            Debug.Log("ENDPOINT NOT SET");
+        }
+        else if (transform.position.y < EndPoint.position.y)
+        {
+            Destroy(this.gameObject);
+            Spawner.DecreaseAliveEnemies();
+        }
+    
+    }
+
+    
 }
