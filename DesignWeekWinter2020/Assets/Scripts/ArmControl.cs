@@ -53,17 +53,16 @@ public class ArmControl : MonoBehaviour
             targetHand.angularVelocity = 0f;
         }
 
-        if (Input.GetButton("Fire1"))
-        {
-            print("fire1");
-            targetHand.angularVelocity = TargetHandRotationForce;
-        }
-        else if (Input.GetButton("Fire2"))
-        {
-            print("fire2");
-            targetHand.angularVelocity = -TargetHandRotationForce;
-        }
-
+        //if (Input.GetButton("Fire1"))
+        //{
+        //    print("fire1");
+        //    targetHand.angularVelocity = TargetHandRotationForce;
+        //}
+        //else if (Input.GetButton("Fire2"))
+        //{
+        //    print("fire2");
+        //    targetHand.angularVelocity = -TargetHandRotationForce;
+        //}
 
     }
 }
