@@ -16,25 +16,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
---- !u!114 &-4963345977350377499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD Project/designWeekWinter2020/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637189287880000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-4337772500295369538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,12 +50,12 @@ MonoBehaviour:
   Path: event:/BGMusic
   guid: ec7c9cbb84bcd74eb44af1ceeb1889bd
   Banks:
-  - {fileID: -4963345977350377499}
+  - {fileID: 6378809823224812518}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 2086746645122712086}
+  - {fileID: -448806420848125715}
   MinDistance: 0
   MaxDistance: 0
   Length: 19998
@@ -109,7 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD Project/designWeekWinter2020/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637189287880000000
+  lastModified: 637189289936780406
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -133,6 +115,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-448806420848125715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGMusic/GameEnd
+  m_EditorClassIdentifier: 
+  Name: GameEnd
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,15 +146,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -868570122719095394}
-  - {fileID: -4963345977350377499}
+  - {fileID: 6378809823224812518}
   EditorEvents:
   - {fileID: -4307006892336139259}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -4963345977350377499}
+  - {fileID: 6378809823224812518}
   StringsBanks:
   - {fileID: -868570122719095394}
-  stringsBankWriteTime: 637189287880000000
+  stringsBankWriteTime: 637189289936780406
   cacheVersion: 3
 --- !u!114 &55988712917548721
 MonoBehaviour:
@@ -174,23 +173,6 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
---- !u!114 &2086746645122712086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/BGMusic/GameEnd
-  m_EditorClassIdentifier: 
-  Name: GameEnd
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
 --- !u!114 &5570814563845489836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,6 +205,24 @@ MonoBehaviour:
   Path: FMOD Project/designWeekWinter2020/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637189239860398868
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &6378809823224812518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/designWeekWinter2020/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637189289936770524
   LoadResult: 0
   FileSizes: []
   Exists: 1
