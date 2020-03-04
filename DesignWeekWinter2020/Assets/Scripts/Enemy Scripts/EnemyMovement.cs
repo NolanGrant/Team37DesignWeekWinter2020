@@ -24,12 +24,15 @@ public class EnemyMovement : MonoBehaviour
     private WaveSetUp Spawner;
 
     Vector3 startingPos;
+
+    private Transform EndPoint;
     // Start is called before the first frame update
     void Start()
     {
         startingPos = transform.position;
         Spawner = GameObject.Find("Spawner").GetComponent<WaveSetUp>();
         Spawner.IncreaseAliveEnemies();
+        EndPoint = GameObject.Find("EndPoint").transform;
 
     }
 
@@ -37,6 +40,7 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         MoveDown();
+        CheckOutOfBounds();
     }
     void MoveDown()
     {
@@ -60,4 +64,16 @@ public class EnemyMovement : MonoBehaviour
         Spawner.DecreaseAliveEnemies();
         Destroy(this.gameObject);
     }
+
+    private void CheckOutOfBounds() 
+    {
+        if (transform.position.y < EndPoint.position.y)
+        {
+            Destroy(this.gameObject);
+            Spawner.DecreaseAliveEnemies();
+        }
+    
+    }
+
+    
 }
