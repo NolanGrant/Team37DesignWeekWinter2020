@@ -113,7 +113,9 @@ MonoBehaviour:
   movementSpeed: 5
   frequency: 0
   magnitude: 0
+  chargeTime: 0.75
   zigzag: 0
   forward: 1
+  chargeAttack: 1
   explosionPrefab: {fileID: 8233719179907812970, guid: 649dd84f77f522c41a61b66856a9ada7,
     type: 3}

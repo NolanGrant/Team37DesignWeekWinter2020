@@ -14,10 +14,16 @@ public class EnemyMovement : MonoBehaviour
     float magnitude = 0.5f;
 
     [SerializeField]
+    float chargeTime = 0.75f;
+
+    [SerializeField]
     bool zigzag = true;
 
     [SerializeField]
     bool forward = false;
+
+    [SerializeField]
+    bool chargeAttack = false;
 
     public GameObject explosionPrefab;
 
@@ -26,14 +32,31 @@ public class EnemyMovement : MonoBehaviour
     Vector3 startingPos;
 
     private Transform EndPoint;
+
+    private float MaxMovementSpeed;
+
+    
     // Start is called before the first frame update
     void Start()
     {
+
         startingPos = transform.position;
         Spawner = GameObject.Find("Spawner").GetComponent<WaveSetUp>();
         Spawner.IncreaseAliveEnemies();
         EndPoint = GameObject.Find("EndPoint").transform;
 
+
+
+    }
+
+    private void Awake()
+    {
+        if (chargeAttack)
+        {
+            MaxMovementSpeed = movementSpeed;
+            movementSpeed = 0;
+            StartCoroutine(WaitToCharge());
+        }
     }
 
     // Update is called once per frame
@@ -44,18 +67,19 @@ public class EnemyMovement : MonoBehaviour
     }
     void MoveDown()
     {
+
         if (zigzag)
         {
             startingPos -= transform.up * Time.deltaTime * movementSpeed;
             transform.position = startingPos + transform.right * Mathf.Sin(Time.time * frequency) * magnitude;
         }
 
-        if (forward)
+        else if (forward)
         {
             startingPos -= transform.up * Time.deltaTime * movementSpeed;
             transform.position = startingPos + transform.right * magnitude;
         }
-
+    
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -73,6 +97,12 @@ public class EnemyMovement : MonoBehaviour
             Spawner.DecreaseAliveEnemies();
         }
     
+    }
+
+    private IEnumerator WaitToCharge()
+    { 
+        yield return new WaitForSeconds(chargeTime);
+        movementSpeed = MaxMovementSpeed;
     }
 
     
