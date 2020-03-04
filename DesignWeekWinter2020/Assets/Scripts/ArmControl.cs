@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ArmControl : MonoBehaviour
 {
+    public float horiAxis;
+    public float vertAxis;
 
     public int playerid;
     public Rigidbody2D targetHand;
@@ -30,7 +32,7 @@ public class ArmControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        inputDirection = (new Vector2(Input.GetAxis(horizontalInputName), Input.GetAxis(verticalInputName))).normalized;
+        inputDirection = (new Vector2(horiAxis, vertAxis)).normalized;
     }
 
     private void FixedUpdate()
@@ -53,6 +55,7 @@ public class ArmControl : MonoBehaviour
             targetHand.angularVelocity = 0f;
         }
 
+        /*
         if (Input.GetButton("Fire1"))
         {
             print("fire1");
@@ -63,6 +66,7 @@ public class ArmControl : MonoBehaviour
             print("fire2");
             targetHand.angularVelocity = -TargetHandRotationForce;
         }
+        */
 
 
     }

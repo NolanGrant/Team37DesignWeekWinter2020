@@ -70,12 +70,16 @@ public class PlayerController : MonoBehaviour
 
         if (docked)
         {
+            /*
             currentGun.transform.RotateAround(ship.transform.position, new Vector3(0,0,1), -0.5f * Input.GetAxis(playerid + "_Horizontal"));
             //currentGun.transform.Translate(new Vector3(-1,0,0));
             if (Input.GetButtonDown(playerid + "_Shoot"))
             {
                 currentGun.GetComponent<Guns>().triggerShoot = true;
             }
+            */
+            currentGun.GetComponent<ArmControl>().horiAxis = Input.GetAxis(playerid + "_Horizontal");
+            currentGun.GetComponent<ArmControl>().vertAxis = Input.GetAxis(playerid + "_Vertical");
         }
     }
 
@@ -83,11 +87,9 @@ public class PlayerController : MonoBehaviour
     {
         GameObject checkCollision = collision.gameObject;
 
-        LeftGun leftDock = checkCollision.GetComponent<LeftGun>();
+        ControlConsole console = checkCollision.GetComponent<ControlConsole>();
 
-        RightGun rightDock = checkCollision.GetComponent<RightGun>();
-
-        if(leftDock != null)
+        if(console != null)
         {
             //collision.gameObject.GetComponent<SpriteRenderer>().color = hoverColor;
 
@@ -97,7 +99,7 @@ public class PlayerController : MonoBehaviour
                 transform.position = collision.transform.position;
                 _body.velocity = new Vector2(0, 0);
                 dockAttempt = false;
-                currentGun = leftDock.curGun;
+                currentGun = console.curArm;
             }
 
             if (docked)
@@ -112,30 +114,6 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-        if (rightDock != null)
-        {
-            //collision.gameObject.GetComponent<SpriteRenderer>().color = hoverColor;
-
-            if (dockAttempt && !docked)
-            {
-                docked = true;
-                transform.position = collision.transform.position;
-                _body.velocity = new Vector2(0, 0);
-                dockAttempt = false;
-                currentGun = rightDock.curGun;
-            }
-
-            if (docked)
-            {
-                //collision.gameObject.GetComponent<SpriteRenderer>().color = dockedColor;
-                transform.position = collision.transform.position;
-                _body.velocity = new Vector2(0, 0);
-                if (dockAttempt)
-                {
-                    docked = false;
-                    transform.position = new Vector3(collision.transform.position.x - 0.2f, collision.transform.position.y, transform.position.z);
-                }
-            }
-        }
+        
     }
 }

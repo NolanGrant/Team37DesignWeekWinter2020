@@ -6,9 +6,9 @@ public class EnemyScore : MonoBehaviour
 {
     public float lifetime;
     public float speed;
+    public float size;
     float timer;
 
-    public GameObject scorePop;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +19,8 @@ public class EnemyScore : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+
+        transform.localScale = new Vector3(size, size, size);
 
         transform.Translate(transform.up * speed);
 

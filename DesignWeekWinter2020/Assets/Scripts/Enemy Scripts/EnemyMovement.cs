@@ -20,6 +20,7 @@ public class EnemyMovement : MonoBehaviour
     bool forward = false;
 
     public GameObject explosionPrefab;
+    public GameObject scorePop;
 
     Vector3 startingPos;
     // Start is called before the first frame update
@@ -53,6 +54,11 @@ public class EnemyMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        GameObject score = GameObject.Instantiate(scorePop, transform.position, Quaternion.identity) as GameObject;
+        score.GetComponent<RectTransform>().position = transform.position;
+        score.GetComponent<RectTransform>().localScale = new Vector3(1,1,1);
+        score.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform);
+        Score.score += 50;
         Destroy(this.gameObject);
     }
 }

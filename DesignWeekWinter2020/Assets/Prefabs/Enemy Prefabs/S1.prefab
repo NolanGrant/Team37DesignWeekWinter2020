@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.8666667, g: 0.4509804, b: 0.4509804, a: 1}
+  m_Color: {r: 1, g: 0.3726415, b: 0.3726415, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -95,9 +95,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.000000009934108, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.12312311
 --- !u!114 &3828909725309022807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,4 +116,6 @@ MonoBehaviour:
   zigzag: 0
   forward: 1
   explosionPrefab: {fileID: 8233719179907812970, guid: 649dd84f77f522c41a61b66856a9ada7,
+    type: 3}
+  scorePop: {fileID: 7471009793013735373, guid: d159c55b0007b18429498e54dfa8f6a0,
     type: 3}

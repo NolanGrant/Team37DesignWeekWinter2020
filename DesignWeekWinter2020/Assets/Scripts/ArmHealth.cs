@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ArmHealth : MonoBehaviour
 {
-
     public float maxHealth = 100;
     public float currentHealth;
 
