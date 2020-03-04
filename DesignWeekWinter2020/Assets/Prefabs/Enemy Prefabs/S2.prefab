@@ -117,3 +117,5 @@ MonoBehaviour:
   forward: 0
   explosionPrefab: {fileID: 8233719179907812970, guid: 649dd84f77f522c41a61b66856a9ada7,
     type: 3}
+  scorePop: {fileID: 7471009793013735373, guid: d159c55b0007b18429498e54dfa8f6a0,
+    type: 3}

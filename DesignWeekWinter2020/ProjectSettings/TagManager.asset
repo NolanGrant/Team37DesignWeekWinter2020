@@ -3,10 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - RightArm
-  - LeftArm
-  - EnemySpawn
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -16,11 +13,11 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
-  - RightArm
-  - LeftArm
-  - RightWeapon
-  - LeftWeapon
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
