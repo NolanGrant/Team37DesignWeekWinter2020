@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: b1da582c136d9fb49a5e1867c6863f98
+guid: 17b14e103347ad54ab6b3ddcd78e2ef0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5414878402050354129
-    second: Enemy_S1_0
+      213: 2620858771019174875
+    second: Enemy_S2_0
   - first:
-      213: 4688213924691026341
-    second: Enemy_S1_1
+      213: -2784031133239807501
+    second: Enemy_S2_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 125
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemy_S1_0
+      name: Enemy_S2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95fe8a3f930fb9444bb6498b60a906b3
-      internalID: -5414878402050354129
+      spriteID: f4a2a2fbf58ca39428c01cd80322ff11
+      internalID: 2620858771019174875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_S1_1
+      name: Enemy_S2_1
       rect:
         serializedVersion: 2
         x: 64
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7539a6d0284b67d41b77f4f376a60825
-      internalID: 4688213924691026341
+      spriteID: 2461466b0b9ab6d4ba2203a2bba649ad
+      internalID: -2784031133239807501
       vertices: []
       indices: 
       edges: []

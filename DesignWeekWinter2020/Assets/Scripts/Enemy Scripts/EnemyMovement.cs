@@ -79,6 +79,7 @@ public class EnemyMovement : MonoBehaviour
         }
         else if (transform.position.y < EndPoint.position.y)
         {
+            MainHealth.hp -= 5;
             Destroy(this.gameObject);
             Spawner.DecreaseAliveEnemies();
         }

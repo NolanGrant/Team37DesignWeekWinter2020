@@ -110,7 +110,13 @@ public class PlayerController : MonoBehaviour
                 if (dockAttempt)
                 {
                     docked = false;
-                    transform.position = new Vector3(collision.transform.position.x + 0.2f, collision.transform.position.y, transform.position.z);
+
+                    Vector3 diff = transform.position - ship.transform.position;
+                    diff.Normalize();
+                    float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+                    transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
+                    transform.Translate(transform.right * 0.2f * Mathf.Sign(diff.x));
+                    transform.localEulerAngles = new Vector3 (0, 0, 0);
                 }
             }
         }
