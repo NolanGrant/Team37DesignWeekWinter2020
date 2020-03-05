@@ -2601,7 +2601,8 @@ MonoBehaviour:
   laserBeam: {fileID: 7630498107955832601, guid: eb1542f8829839e46a3af967a2155741,
     type: 3}
   beamLife: 1.5
-  chargeParticles: {fileID: 0}
+  chargeParticles: {fileID: 4662182056165098529, guid: ed6231267c27a7b4ca3e0f04bc10fa34,
+    type: 3}
 --- !u!212 &849690670
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4423,6 +4424,7 @@ MonoBehaviour:
   disabledDuration: 3
   disabledColor: {r: 0, g: 0, b: 0, a: 0}
   disabledEffectedSprites: []
+  armColliders: []
 --- !u!114 &1621028837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6215,6 +6217,7 @@ MonoBehaviour:
   disabledDuration: 3
   disabledColor: {r: 0, g: 0, b: 0, a: 0}
   disabledEffectedSprites: []
+  armColliders: []
 --- !u!114 &2112322157214818573
 MonoBehaviour:
   m_ObjectHideFlags: 0

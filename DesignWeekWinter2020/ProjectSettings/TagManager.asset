@@ -6,6 +6,7 @@ TagManager:
   tags:
   - RightArm
   - Canvas
+  - Ship
   layers:
   - Default
   - TransparentFX
