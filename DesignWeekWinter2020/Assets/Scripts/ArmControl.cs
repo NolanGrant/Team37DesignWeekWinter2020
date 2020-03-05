@@ -14,19 +14,21 @@ public class ArmControl : MonoBehaviour
     public float TargetHandRotationForce = 5f;
 
     Vector2 inputDirection;
-
-    public bool stopMovingIfNoInput = true;
-
-
+    public ArmHealth myHealth;
     string horizontalInputName;
     string verticalInputName;
+
+    private void Awake()
+    {
+        myHealth = GetComponent<ArmHealth>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         //assign input names
-         horizontalInputName = playerid.ToString() + "_Horizontal";
-         verticalInputName = playerid.ToString() + "_Vertical"; ;
+        horizontalInputName = playerid.ToString() + "_Horizontal";
+        verticalInputName = playerid.ToString() + "_Vertical"; ;
     }
 
     // Update is called once per frame
@@ -37,21 +39,16 @@ public class ArmControl : MonoBehaviour
 
     private void FixedUpdate()
     {
-
-        if(stopMovingIfNoInput == true)
+        if (myHealth.destroyed == false)
         {
             targetHand.velocity = (inputDirection * TargetHandMovementForce);
         }
         else
         {
-            if (inputDirection.magnitude > 0.1f)
-            {
-                print("move arm");
-                targetHand.velocity = (inputDirection * TargetHandMovementForce);
-            }
+            targetHand.velocity = Vector2.zero;
         }
 
-        if( inputDirection.magnitude > 0.1f)
+        if (inputDirection.magnitude > 0.1f)
         {
             targetHand.angularVelocity = 0f;
         }
