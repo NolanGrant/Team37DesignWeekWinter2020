@@ -95,6 +95,21 @@ public class EnemyMovement : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("EnemyCollider"))
+        {
+            print("body hit");
+
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+
+            MainHealth.hp -= 5;
+
+            Spawner.DecreaseAliveEnemies();
+            Destroy(this.gameObject);
+        }
+    }
+
     private void CheckOutOfBounds() 
     {
         if(EndPoint == null)

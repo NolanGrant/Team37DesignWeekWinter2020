@@ -17,6 +17,52 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-6267389825981471235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Chainsaw/ChainsawCut
+  m_EditorClassIdentifier: 
+  Path: event:/Chainsaw/ChainsawCut
+  guid: 33bea4db8f3ead45af4454576e5009ac
+  Banks:
+  - {fileID: -669484881469658367}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2550
+--- !u!114 &-5566515923080469657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Lazer
+  m_EditorClassIdentifier: 
+  Path: event:/Lazer
+  guid: 50f43ed394fe9547b43a1f15f34dae3c
+  Banks:
+  - {fileID: -669484881469658367}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3500
 --- !u!114 &-4337772500295369538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50,12 +96,12 @@ MonoBehaviour:
   Path: event:/BGMusic
   guid: ec7c9cbb84bcd74eb44af1ceeb1889bd
   Banks:
-  - {fileID: 683783597183802165}
+  - {fileID: -669484881469658367}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 3365749424529335790}
+  - {fileID: 4895359545446619774}
   MinDistance: 0
   MaxDistance: 0
   Length: 19998
@@ -95,6 +141,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-2031903514707337803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Chainsaw/ChainsawClash
+  m_EditorClassIdentifier: 
+  Path: event:/Chainsaw/ChainsawClash
+  guid: db4611bc9dab1445b6094027c8554857
+  Banks:
+  - {fileID: -669484881469658367}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 600
 --- !u!114 &-868570122719095394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,11 +178,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD Project/designWeekWinter2020/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637189287880000000
+  lastModified: 637190023116454161
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 782
+    Value: 1016
   Exists: 1
 --- !u!114 &-842199599547862622
 MonoBehaviour:
@@ -130,6 +199,24 @@ MonoBehaviour:
   Path: FMOD Project/designWeekWinter2020/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637189165842082444
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-669484881469658367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/designWeekWinter2020/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637190023116444281
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -164,15 +251,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -868570122719095394}
-  - {fileID: 683783597183802165}
+  - {fileID: -669484881469658367}
   EditorEvents:
   - {fileID: -4307006892336139259}
+  - {fileID: 8268046981237284359}
+  - {fileID: -6267389825981471235}
+  - {fileID: -5566515923080469657}
+  - {fileID: 3573532092616938466}
+  - {fileID: -2031903514707337803}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 683783597183802165}
+  - {fileID: -669484881469658367}
   StringsBanks:
   - {fileID: -868570122719095394}
-  stringsBankWriteTime: 637189287880000000
+  stringsBankWriteTime: 637190023116454161
   cacheVersion: 3
 --- !u!114 &55988712917548721
 MonoBehaviour:
@@ -244,6 +336,29 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &3573532092616938466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Chainsaw/ChainsawIdle
+  m_EditorClassIdentifier: 
+  Path: event:/Chainsaw/ChainsawIdle
+  guid: 81016704b69e0a4e8aca4f87811d7ae3
+  Banks:
+  - {fileID: -669484881469658367}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1770
 --- !u!114 &4545160896873257248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,6 +376,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &4895359545446619774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGMusic/GameEnd
+  m_EditorClassIdentifier: 
+  Name: GameEnd
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &5570814563845489836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,6 +463,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &8268046981237284359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/EngineFire
+  m_EditorClassIdentifier: 
+  Path: event:/EngineFire
+  guid: 024001a02592424ba578db84dc8710ab
+  Banks:
+  - {fileID: -669484881469658367}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
 --- !u!114 &8531537324695956553
 MonoBehaviour:
   m_ObjectHideFlags: 0
