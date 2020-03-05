@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{3ebbdbf8-2639-4d65-aeba-7c3b64e5bc2a}">
+		<property name="assetPath">
+			<value>326803__johnbuhr__sword-clash-3.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.41267573696145127</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{eb7b3d0a-bfd7-4815-8561-32d9c21059fb}</destination>
+		</relationship>
+	</object>
+</objects>
