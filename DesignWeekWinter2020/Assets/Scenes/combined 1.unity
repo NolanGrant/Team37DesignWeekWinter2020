@@ -668,6 +668,16 @@ PrefabInstance:
       propertyPath: leastDifficultLine
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8950137347935920248, guid: 0cd599f7d8a0ec04abd6285ebb23b8ab,
+        type: 3}
+      propertyPath: spawnRate
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950137347935920248, guid: 0cd599f7d8a0ec04abd6285ebb23b8ab,
+        type: 3}
+      propertyPath: TimeBetweenWaves
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cd599f7d8a0ec04abd6285ebb23b8ab, type: 3}
 --- !u!1 &256845192
