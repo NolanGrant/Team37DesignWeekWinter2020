@@ -17,6 +17,8 @@ public class ArmHealth : MonoBehaviour
 
     Chainsaw myChainsaw;
 
+    public Collider2D[] armColliders;
+
     private void Awake()
     {
         myChainsaw = GetComponentInChildren<Chainsaw>();

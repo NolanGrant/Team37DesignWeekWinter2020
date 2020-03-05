@@ -85,21 +85,13 @@ public class EnemyMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-        GameObject score = GameObject.Instantiate(scorePop, transform.position, Quaternion.identity) as GameObject;
-        score.GetComponent<RectTransform>().position = transform.position;
-        score.GetComponent<RectTransform>().localScale = new Vector3(1,1,1);
-        score.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform);
-        Score.score += 50;
-        Spawner.DecreaseAliveEnemies();
-        Destroy(this.gameObject);
+        Kill();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.layer == LayerMask.NameToLayer("EnemyCollider"))
         {
-            print("body hit");
 
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
 
@@ -108,6 +100,24 @@ public class EnemyMovement : MonoBehaviour
             Spawner.DecreaseAliveEnemies();
             Destroy(this.gameObject);
         }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("OnlyInteractEnemies"))
+        {
+            print("beamhit");
+            Kill();
+        }
+    }
+
+    void Kill()
+    {
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        GameObject score = GameObject.Instantiate(scorePop, transform.position, Quaternion.identity) as GameObject;
+        score.GetComponent<RectTransform>().position = transform.position;
+        score.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+        score.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform);
+        Score.score += 50;
+        Spawner.DecreaseAliveEnemies();
+        Destroy(this.gameObject);
     }
 
     private void CheckOutOfBounds() 
