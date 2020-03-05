@@ -26,7 +26,7 @@ public class ShoulderCannon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GetComponent<Guns>().triggerShoot && !shoulderCannonShooting)
+        if (GetComponent<Guns>().triggerShoot && !shoulderCannonShooting && currentTime == 0)
         {
             GameObject newChargeParticles = Instantiate(chargeParticles, transform.position, Quaternion.identity);
             newChargeParticles.GetComponent<SelfDestruct>().lifespan = chargeTime;
@@ -41,7 +41,6 @@ public class ShoulderCannon : MonoBehaviour
         }
         else if (shoulderCannonShooting && currentTime > chargeTime)
         {
-            currentTime = 0;
             shoulderCannonShooting = false;
             GameObject instantiatedBeam = GameObject.Instantiate(laserBeam, transform.position, transform.rotation) as GameObject;
             currentBeam = instantiatedBeam;
@@ -54,6 +53,7 @@ public class ShoulderCannon : MonoBehaviour
 
             if (beamTimer > beamLife)
             {
+                currentTime = 0;
                 beamTimer = 0;
                 DestroyImmediate(currentBeam);
             }
