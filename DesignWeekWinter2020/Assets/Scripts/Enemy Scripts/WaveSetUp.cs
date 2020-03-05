@@ -94,6 +94,12 @@ public class WaveSetUp : MonoBehaviour
         {
             mostDifficultLine++;
             mostDifficultLine = Mathf.Clamp(mostDifficultLine, 0, LineTypes.Length);
+
+            if (mostDifficultLine>=(LineTypes.Length/2))
+            {
+                leastDifficultLine++;
+                leastDifficultLine = Mathf.Clamp(leastDifficultLine, 0, LineTypes.Length/2);
+            }
         }
 
     }
