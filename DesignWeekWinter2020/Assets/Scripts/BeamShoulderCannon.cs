@@ -12,6 +12,7 @@ public class BeamShoulderCannon : MonoBehaviour
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
+        transform.SetParent(GameObject.FindGameObjectWithTag("Ship").transform);
     }
 
     // Update is called once per frame
