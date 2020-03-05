@@ -13,7 +13,7 @@ public class ArmHealth : MonoBehaviour
     public float disabledDuration = 3f;
     public Color disabledColor;
     public SpriteRenderer[] disabledEffectedSprites;
-    bool destroyed = false;
+    public bool destroyed = false;
 
     Chainsaw myChainsaw;
 
@@ -49,8 +49,13 @@ public class ArmHealth : MonoBehaviour
                     sprite.color = disabledColor;
                 }
             }
+            foreach(Collider2D col in armColliders)
+            {
+                col.enabled = false;
+            }
         }
     }
+
     public void RepairArm()
     {
         print("repar");
@@ -60,6 +65,10 @@ public class ArmHealth : MonoBehaviour
         foreach (SpriteRenderer sprite in disabledEffectedSprites)
         {
             sprite.color = Color.white;
+        }
+        foreach (Collider2D col in armColliders)
+        {
+            col.enabled = true;
         }
     }
 }
