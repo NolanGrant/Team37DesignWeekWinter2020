@@ -26,10 +26,18 @@ public class PlayerController : MonoBehaviour
     GameObject currentGun;
 
     private int guntype;
+    [FMODUnity.EventRef]
+    public string chainSawIdleEvent = "";
+    FMOD.Studio.EventInstance chainSawIdle;
+    [FMODUnity.EventRef]
+    public string engineEvent = "";
+    FMOD.Studio.EventInstance engineFMOD;
     // Start is called before the first frame update
     void Start()
     {
         _body = GetComponent<Rigidbody2D>();
+        chainSawIdle = FMODUnity.RuntimeManager.CreateInstance(chainSawIdleEvent);
+        engineFMOD = FMODUnity.RuntimeManager.CreateInstance(engineEvent);
     }
 
     // Update is called once per frame
@@ -84,6 +92,14 @@ public class PlayerController : MonoBehaviour
             {
                 currentGun.GetComponent<ArmControl>().horiAxis = Input.GetAxis(playerid + "_Horizontal");
                 currentGun.GetComponent<ArmControl>().vertAxis = Input.GetAxis(playerid + "_Vertical");
+
+                FMOD.Studio.PLAYBACK_STATE playState;
+                chainSawIdle.getPlaybackState(out playState);
+                if (playState != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+                {
+                    chainSawIdle.start();
+                }
+
             }
             else if (guntype == 1)
             {
@@ -100,7 +116,18 @@ public class PlayerController : MonoBehaviour
                     Debug.Log("Shoot");
                     currentGun.GetComponent<Guns>().triggerShoot = true;
                 }
+                FMOD.Studio.PLAYBACK_STATE playState;
+                engineFMOD.getPlaybackState(out playState);
+                if (playState != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+                {
+                    engineFMOD.start();
+                }
             }
+        }
+        else
+        {
+            chainSawIdle.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            engineFMOD.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         }
     }
 
