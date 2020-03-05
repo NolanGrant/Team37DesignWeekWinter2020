@@ -131,7 +131,7 @@ public class EnemyMovement : MonoBehaviour
         {
             MainHealth.hp -= 5;
             scream.start();
-            Destroy(this.gameObject,3);
+            Destroy(this.gameObject);
             Spawner.DecreaseAliveEnemies();
         }
     
