@@ -8,6 +8,11 @@ public class Chainsaw : MonoBehaviour
     public string chainSawClashEvent = "";
     FMOD.Studio.EventInstance chainSawClash;
 
+
+    [FMODUnity.EventRef]
+    public string sawDMGEvent = "";
+    FMOD.Studio.EventInstance sawDMG;
+
     public GameObject sparksPrefab;
 
     public float damagePerSecondToTeammate = 100;
@@ -16,6 +21,7 @@ public class Chainsaw : MonoBehaviour
     void Start()
     {
         chainSawClash = FMODUnity.RuntimeManager.CreateInstance(chainSawClashEvent);
+        sawDMG = FMODUnity.RuntimeManager.CreateInstance(sawDMGEvent);
     }
 
     // Update is called once per frame
@@ -33,6 +39,10 @@ public class Chainsaw : MonoBehaviour
             chainSawClash.start();
 
             collision.gameObject.GetComponentInParent<ArmHealth>().currentHealth -= damagePerSecondToTeammate * Time.fixedDeltaTime;
+        }
+        if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            sawDMG.start();
         }
     }
     private void OnCollisionStay2D(Collision2D collision)

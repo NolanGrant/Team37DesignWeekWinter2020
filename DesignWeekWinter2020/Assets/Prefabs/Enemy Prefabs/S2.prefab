@@ -123,6 +123,7 @@ MonoBehaviour:
     type: 3}
   scorePop: {fileID: 7471009793013735373, guid: d159c55b0007b18429498e54dfa8f6a0,
     type: 3}
+  screamEvent: event:/Screams
 --- !u!95 &675309939741833351
 Animator:
   serializedVersion: 3

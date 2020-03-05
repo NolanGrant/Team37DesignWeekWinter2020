@@ -725,6 +725,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ed9b49baabd14444b5c9898958bc87b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chainSawClashEvent: event:/Chainsaw/ChainsawClash
+  sawDMGEvent: event:/Chainsaw/ChainsawCut
   sparksPrefab: {fileID: 3568559779819696562, guid: 9b01c81665eb08d4a80755aa4fd08d34,
     type: 3}
   damagePerSecondToTeammate: 100
@@ -869,6 +871,8 @@ MonoBehaviour:
   - {fileID: 4335680191758707994}
   - {fileID: 4335680191426540161}
   - {fileID: 0}
+  destroyed: 0
+  armColliders: []
 --- !u!114 &8189356464842585931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -887,4 +891,4 @@ MonoBehaviour:
   targetHand: {fileID: 7851473582941796824}
   TargetHandMovementForce: 25
   TargetHandRotationForce: 145
-  stopMovingIfNoInput: 1
+  myHealth: {fileID: 0}

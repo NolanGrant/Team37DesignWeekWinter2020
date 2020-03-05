@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LineTypes:
-  - {fileID: 4597668297092113688, guid: 87b358d33f10efc43bbca2d18fe8f14e, type: 3}
   - {fileID: 933717462766295153, guid: fbab03fa3432ed941aae84084eeec247, type: 3}
+  - {fileID: 4597668297092113688, guid: 87b358d33f10efc43bbca2d18fe8f14e, type: 3}
   - {fileID: 4380326406659968830, guid: 47251a12d5df6fa4f81b706b4adb3a44, type: 3}
   - {fileID: 8115657418361785916, guid: a5cdec1dcf78a2646a667b79640415ff, type: 3}
   - {fileID: 3475751133613966713, guid: 723c5baf8597b0747911accdcbd61ce1, type: 3}
@@ -60,6 +60,9 @@ MonoBehaviour:
   - {fileID: 8950137349592575197}
   leastDifficultLine: 1
   mostDifficultLine: 4
+  spawnRate: 0
+  TimeBetweenWaves: 0
+  clustersPerWave: 0
 --- !u!1 &8950137348156929748
 GameObject:
   m_ObjectHideFlags: 0
