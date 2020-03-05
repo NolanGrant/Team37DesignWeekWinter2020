@@ -2808,6 +2808,11 @@ PrefabInstance:
       propertyPath: armColliders.Array.data[3]
       value: 
       objectReference: {fileID: 818016915}
+    - target: {fileID: 7851473583091172988, guid: 85efe963083ab71459a355209452815a,
+        type: 3}
+      propertyPath: currentHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8189356464842585931, guid: 85efe963083ab71459a355209452815a,
         type: 3}
       propertyPath: myHealth
@@ -3319,6 +3324,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8052550495867353901, guid: 45e033a65bb15bc4a89831810a6f491a,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8052550496323017717, guid: 45e033a65bb15bc4a89831810a6f491a,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -3369,6 +3379,11 @@ PrefabInstance:
       propertyPath: armColliders.Array.data[3]
       value: 
       objectReference: {fileID: 850665405}
+    - target: {fileID: 8052550496759009033, guid: 45e033a65bb15bc4a89831810a6f491a,
+        type: 3}
+      propertyPath: currentHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8052550496759009038, guid: 45e033a65bb15bc4a89831810a6f491a,
         type: 3}
       propertyPath: m_LocalPosition.x
