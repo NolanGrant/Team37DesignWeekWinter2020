@@ -36,7 +36,9 @@ public class EnemyMovement : MonoBehaviour
 
     private float MaxMovementSpeed;
 
-    
+    [FMODUnity.EventRef]
+    public string screamEvent = "";
+    FMOD.Studio.EventInstance scream;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,8 +48,7 @@ public class EnemyMovement : MonoBehaviour
         Spawner.IncreaseAliveEnemies();
         EndPoint = GameObject.Find("EndPoint").transform;
 
-
-
+        scream = FMODUnity.RuntimeManager.CreateInstance(screamEvent);
     }
 
     private void Awake()
@@ -85,10 +86,6 @@ public class EnemyMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "L_chainsaw")
-        {
-
-        }
         Kill();
     }
 
@@ -133,7 +130,8 @@ public class EnemyMovement : MonoBehaviour
         else if (transform.position.y < EndPoint.position.y)
         {
             MainHealth.hp -= 5;
-            Destroy(this.gameObject);
+            scream.start();
+            Destroy(this.gameObject,3);
             Spawner.DecreaseAliveEnemies();
         }
     
