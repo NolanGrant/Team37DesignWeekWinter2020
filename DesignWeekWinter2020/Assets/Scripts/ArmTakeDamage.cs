@@ -17,8 +17,9 @@ public class ArmTakeDamage : MonoBehaviour
         camShake = Camera.main.GetComponent<CameraShake>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+       
         GameObject col = collision.gameObject;
 
         EnemyMovement enemy = col.GetComponent<EnemyMovement>();
@@ -27,6 +28,13 @@ public class ArmTakeDamage : MonoBehaviour
         {
             camShake.SmallImpact();
             armHp.currentHealth -= 10;
+        }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("OnlyInteractEnemies"))
+        {
+            Debug.Log("Hit");
+            armHp.currentHealth -= 200;
+
         }
     }
 }

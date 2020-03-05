@@ -34,17 +34,18 @@ public class WaveSetUp : MonoBehaviour
     int unlockRate;
 
     int unlockNextLine = 0;
-   
+
+    public bool ready = false;
 
     void Start()
     {
-        InvokeRepeating("SpawnEnemyWave", 1f, spawnRate);
+        //InvokeRepeating("SpawnEnemyWave", 1f, spawnRate);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (wavesSpwned > clustersPerWave)
+        if (wavesSpwned > clustersPerWave && ready == true)
         {
             StartCoroutine(WaitForNextWave());
         }
