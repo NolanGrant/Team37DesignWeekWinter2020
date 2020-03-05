@@ -21,9 +21,9 @@ public class PlayerController : MonoBehaviour
     public float speed;
 
     private bool dockAttempt = false;
-    private bool docked = false;
+    public bool docked = false;
 
-    GameObject currentGun;
+    public GameObject currentGun;
 
     private int guntype;
 
