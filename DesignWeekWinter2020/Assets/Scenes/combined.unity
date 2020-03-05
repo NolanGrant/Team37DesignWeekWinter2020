@@ -340,6 +340,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -515,6 +517,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -736,6 +740,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -779,12 +785,27 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1264252083}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!4 &278642600 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8052550496759009038, guid: 45e033a65bb15bc4a89831810a6f491a,
     type: 3}
   m_PrefabInstance: {fileID: 1264252083}
   m_PrefabAsset: {fileID: 0}
+=======
+--- !u!114 &278642599 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8052550496759009033, guid: 45e033a65bb15bc4a89831810a6f491a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1264252083}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278642597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e888c9e6d3c403740925e0a3831dbb76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> f0d76d2402a10d96d1ab81143b1162a6967c7b70
 --- !u!1 &313624782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,6 +1105,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1789,6 +1812,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 1.609625
       objectReference: {fileID: 0}
+    - target: {fileID: 8189356464842585931, guid: 85efe963083ab71459a355209452815a,
+        type: 3}
+      propertyPath: myHealth
+      value: 
+      objectReference: {fileID: 1325745003}
+    - target: {fileID: 7851473582941796825, guid: 85efe963083ab71459a355209452815a,
+        type: 3}
+      propertyPath: chainSawClashEvent
+      value: event:/Chainsaw/ChainsawClash
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85efe963083ab71459a355209452815a, type: 3}
 --- !u!1 &710571275
@@ -1846,6 +1879,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -2150,6 +2185,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -2420,6 +2457,8 @@ MonoBehaviour:
   hoverColor: {r: 1, g: 0.3254717, b: 0.3254717, a: 0}
   dockedColor: {r: 0.3443396, g: 1, b: 0.34616762, a: 0}
   speed: 3
+  sawIdleEvent: event:/Chainsaw/ChainsawIdle
+  engineIdleEvent: event:/EngineFire
 --- !u!58 &856729816
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2714,6 +2753,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -2787,6 +2828,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -3311,7 +3354,11 @@ PrefabInstance:
         type: 3}
       propertyPath: armHPSlider
       value: 
+<<<<<<< HEAD
       objectReference: {fileID: 1419273041}
+=======
+      objectReference: {fileID: 1558462007}
+>>>>>>> f0d76d2402a10d96d1ab81143b1162a6967c7b70
     - target: {fileID: 8052550496759009033, guid: 45e033a65bb15bc4a89831810a6f491a,
         type: 3}
       propertyPath: armSegments.Array.data[3]
@@ -3411,6 +3458,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: 0.0010004198
+      objectReference: {fileID: 0}
+    - target: {fileID: 8255117685332491838, guid: 45e033a65bb15bc4a89831810a6f491a,
+        type: 3}
+      propertyPath: myHealth
+      value: 
+      objectReference: {fileID: 278642599}
+    - target: {fileID: 8052550496875966636, guid: 45e033a65bb15bc4a89831810a6f491a,
+        type: 3}
+      propertyPath: chainSawClashEvent
+      value: event:/Chainsaw/ChainsawClash
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45e033a65bb15bc4a89831810a6f491a, type: 3}
@@ -3607,12 +3664,27 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 695276253}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!4 &1325745004 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7851473583091172987, guid: 85efe963083ab71459a355209452815a,
     type: 3}
   m_PrefabInstance: {fileID: 695276253}
   m_PrefabAsset: {fileID: 0}
+=======
+--- !u!114 &1325745003 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7851473583091172988, guid: 85efe963083ab71459a355209452815a,
+    type: 3}
+  m_PrefabInstance: {fileID: 695276253}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325745001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e888c9e6d3c403740925e0a3831dbb76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> f0d76d2402a10d96d1ab81143b1162a6967c7b70
 --- !u!1 &1419273039
 GameObject:
   m_ObjectHideFlags: 0
@@ -3702,6 +3774,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1424026051
 GameObject:
   m_ObjectHideFlags: 0
@@ -3758,6 +3832,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: b40225c722a77ca49bdd172d4c4acbd0, type: 3}
     m_FontSize: 85
@@ -4197,6 +4273,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1559492046
 GameObject:
   m_ObjectHideFlags: 0
@@ -4234,6 +4312,8 @@ MonoBehaviour:
   hoverColor: {r: 0.3976548, g: 0, b: 0.8207547, a: 1}
   dockedColor: {r: 0.1307174, g: 1, b: 0, a: 1}
   speed: 3
+  sawIdleEvent: event:/Chainsaw/ChainsawIdle
+  engineIdleEvent: event:/EngineFire
 --- !u!50 &1559492048
 Rigidbody2D:
   serializedVersion: 4
@@ -5346,6 +5426,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &2105043452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5370,6 +5452,8 @@ GameObject:
   - component: {fileID: 2110429895}
   - component: {fileID: 2110429894}
   - component: {fileID: 2110429893}
+  - component: {fileID: 2110429897}
+  - component: {fileID: 2110429896}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5442,6 +5526,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2110429896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110429892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/BGMusic
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &2110429897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110429892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
 --- !u!1 &2143983409
 GameObject:
   m_ObjectHideFlags: 0
@@ -5497,6 +5617,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -6877,6 +6999,8 @@ MonoBehaviour:
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   dockedColor: {r: 0, g: 0, b: 0, a: 0}
   speed: 0
+  sawIdleEvent: 
+  engineIdleEvent: 
 --- !u!50 &9129307126365009503
 Rigidbody2D:
   serializedVersion: 4
@@ -7245,3 +7369,5 @@ MonoBehaviour:
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   dockedColor: {r: 0, g: 0, b: 0, a: 0}
   speed: 0
+  sawIdleEvent: 
+  engineIdleEvent: 

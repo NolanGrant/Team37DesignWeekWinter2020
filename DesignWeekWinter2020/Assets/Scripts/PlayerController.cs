@@ -26,10 +26,20 @@ public class PlayerController : MonoBehaviour
     GameObject currentGun;
 
     private int guntype;
+
+    [FMODUnity.EventRef]
+    public string sawIdleEvent = "";
+    FMOD.Studio.EventInstance sawIdle;
+
+    [FMODUnity.EventRef]
+    public string engineIdleEvent = "";
+    FMOD.Studio.EventInstance engineIdle;
     // Start is called before the first frame update
     void Start()
     {
         _body = GetComponent<Rigidbody2D>();
+        sawIdle = FMODUnity.RuntimeManager.CreateInstance(sawIdleEvent);
+        engineIdle = FMODUnity.RuntimeManager.CreateInstance(engineIdleEvent);
     }
 
     // Update is called once per frame
@@ -82,6 +92,12 @@ public class PlayerController : MonoBehaviour
             */
             if (guntype == 0)
             {
+                FMOD.Studio.PLAYBACK_STATE playState;
+                sawIdle.getPlaybackState(out playState);
+                if (playState != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+                {
+                    sawIdle.start();
+                }
                 currentGun.GetComponent<ArmControl>().horiAxis = Input.GetAxis(playerid + "_Horizontal");
                 currentGun.GetComponent<ArmControl>().vertAxis = Input.GetAxis(playerid + "_Vertical");
             }
@@ -95,8 +111,18 @@ public class PlayerController : MonoBehaviour
             }
             else if (guntype == 2)
             {
+                FMOD.Studio.PLAYBACK_STATE playState;
+                engineIdle.getPlaybackState(out playState);
+                if (playState != FMOD.Studio.PLAYBACK_STATE.PLAYING)
+                {
+                    engineIdle.start();
+                }
                 currentGun.GetComponent<ShipMovement>().movement = Input.GetAxis(playerid + "_Horizontal");
             }
+        } else
+        {
+            sawIdle.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            engineIdle.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         }
     }
 
