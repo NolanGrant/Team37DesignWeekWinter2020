@@ -27,6 +27,9 @@ public class WaveSetUp : MonoBehaviour
     [SerializeField]
     float TimeBetweenWaves;
 
+    [SerializeField]
+    int clustersPerWave;
+
     void Start()
     {
         InvokeRepeating("SpawnEnemyWave", 1f, spawnRate);
@@ -35,7 +38,7 @@ public class WaveSetUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (wavesSpwned > 2)
+        if (wavesSpwned > clustersPerWave)
         {
             StartCoroutine(WaitForNextWave());
         }
