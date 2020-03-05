@@ -19,19 +19,36 @@ public class WaveSetUp : MonoBehaviour
 
     private int aliveEnemies;
 
+    private int wavesSpwned;
+
+    [SerializeField]
+    float spawnRate;
+
+    [SerializeField]
+    float TimeBetweenWaves;
+
     void Start()
     {
-     
+        InvokeRepeating("SpawnEnemyWave", 1f, spawnRate);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (aliveEnemies == 0)
+        if (wavesSpwned > 2)
         {
-            SpawnEnemyWave();
+            StartCoroutine(WaitForNextWave());
         }
     }
+
+    IEnumerator WaitForNextWave() 
+    {
+        wavesSpwned = 0;
+        CancelInvoke("SpawnEnemyWave");
+        yield return new WaitForSeconds(TimeBetweenWaves);
+        InvokeRepeating("SpawnEnemyWave", 0, spawnRate);
+    }
+    
 
     private void SpawnEnemyWave()
     {
@@ -41,8 +58,11 @@ public class WaveSetUp : MonoBehaviour
 
             int lineType = Random.Range(leastDifficultLine, mostDifficultLine + 1);
             Instantiate(LineTypes[lineType - 1], SpawnPoints[i].position, Quaternion.identity);
+            
 
         }
+
+        wavesSpwned++;
         
     }
 
