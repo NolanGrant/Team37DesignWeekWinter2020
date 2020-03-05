@@ -11,8 +11,8 @@ public class SelfDestruct : MonoBehaviour
     void Start()
     {
         Invoke("DestroySelf", lifespan);
-        transform.SetParent(GameObject.FindGameObjectWithTag("Ship").transform);
-        transform.localScale = new Vector3(1, 1, 1);
+        //transform.SetParent(GameObject.FindGameObjectWithTag("Ship").transform);
+        //transform.localScale = new Vector3(1, 1, 1);
     }
 
     void DestroySelf()
