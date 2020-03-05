@@ -8,6 +8,9 @@ public class ShipMovement : MonoBehaviour
     public float speed;
     Rigidbody2D _body;
 
+    public GameObject leftThruster;
+    public GameObject rightThruster;
+
     public float maxHorizontalMovement;
     // Start is called before the first frame update
     void Start()
@@ -21,8 +24,24 @@ public class ShipMovement : MonoBehaviour
         _body.velocity = new Vector2(0, 0);
         _body.velocity = transform.right * movement * speed;
 
+        if (movement > 0.1f)
+        {
+            leftThruster.SetActive(true);
+            rightThruster.SetActive(false);
+        }
+        else if (movement < -0.1f)
+        {
+            rightThruster.SetActive(true);
+            leftThruster.SetActive(false);
+        }
+        else
+        {
+            rightThruster.SetActive(false);
+            leftThruster.SetActive(false);
+        }
+
         movement = 0;
-        
+
     }
     private void LateUpdate()
     {
