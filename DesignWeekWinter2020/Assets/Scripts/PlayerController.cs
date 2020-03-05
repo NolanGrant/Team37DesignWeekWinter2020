@@ -144,6 +144,10 @@ public class PlayerController : MonoBehaviour
                 dockAttempt = false;
                 currentGun = console.curArm;
                 guntype = console.GetComponent<ControlConsole>().type;
+                if(guntype == 1)
+                {
+                    currentGun.GetComponent<ShoulderCannon>().beamactive = true;
+                }
             }
 
             else if (docked)
@@ -154,7 +158,10 @@ public class PlayerController : MonoBehaviour
                 if (Input.GetButtonDown(playerid + "_Action"))
                 {
                     docked = false;
-
+                    if(guntype == 1)
+                    {
+                        currentGun.GetComponent<ShoulderCannon>().beamactive = false;
+                    }
                     Vector3 diff = transform.position - ship.transform.position;
                     diff.Normalize();
                     float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;

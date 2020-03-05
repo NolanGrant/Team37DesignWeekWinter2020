@@ -17,6 +17,8 @@ public class ShoulderCannon : MonoBehaviour
 
     public GameObject chargeParticles;
 
+    public bool beamactive = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,7 @@ public class ShoulderCannon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (GetComponent<Guns>().triggerShoot && !shoulderCannonShooting && currentTime == 0)
         {
             GameObject newChargeParticles = Instantiate(chargeParticles, transform.position, Quaternion.identity);
@@ -46,12 +49,17 @@ public class ShoulderCannon : MonoBehaviour
             currentBeam = instantiatedBeam;
 
         }
+        */
+
+        if (beamactive == true && currentBeam == null)
+        {
+            GameObject instantiatedBeam = GameObject.Instantiate(laserBeam, transform.position, transform.rotation) as GameObject;
+            currentBeam = instantiatedBeam;
+        }
 
         if (currentBeam != null)
         {
-            beamTimer += Time.deltaTime;
-
-            if (beamTimer > beamLife)
+            if (!beamactive)
             {
                 currentTime = 0;
                 beamTimer = 0;

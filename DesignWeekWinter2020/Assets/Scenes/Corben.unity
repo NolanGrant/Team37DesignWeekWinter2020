@@ -2394,7 +2394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerid: 1
-  ship: {fileID: 0}
+  ship: {fileID: 697352831}
   baseColor: {r: 0.7924528, g: 0.13082945, b: 0.13082945, a: 0}
   hoverColor: {r: 1, g: 0.3254717, b: 0.3254717, a: 0}
   dockedColor: {r: 0.3443396, g: 1, b: 0.34616762, a: 0}
@@ -5696,6 +5696,7 @@ MonoBehaviour:
   beamLife: 1.5
   chargeParticles: {fileID: 4662182056165098529, guid: ed6231267c27a7b4ca3e0f04bc10fa34,
     type: 3}
+  beamactive: 0
 --- !u!212 &1666340683
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6130,6 +6131,7 @@ MonoBehaviour:
     type: 3}
   beamLife: 1
   chargeParticles: {fileID: 0}
+  beamactive: 1
 --- !u!212 &1783311740
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6211,7 +6213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerid: 2
-  ship: {fileID: 0}
+  ship: {fileID: 697352831}
   baseColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}
   hoverColor: {r: 0.3976548, g: 0, b: 0.8207547, a: 1}
   dockedColor: {r: 0.1307174, g: 1, b: 0, a: 1}
