@@ -19,9 +19,12 @@ public class ArmHealth : MonoBehaviour
 
     public Collider2D[] armColliders;
 
+    CameraShake camShake;
+
     private void Awake()
     {
         myChainsaw = GetComponentInChildren<Chainsaw>();
+        camShake = Camera.main.GetComponent<CameraShake>();
     }
 
     // Start is called before the first frame update
@@ -40,6 +43,8 @@ public class ArmHealth : MonoBehaviour
         {
             destroyed = true;
             myChainsaw.enabled = false;
+
+            camShake.LargeImpact();
 
             foreach (Collider2D col in armColliders)
             {

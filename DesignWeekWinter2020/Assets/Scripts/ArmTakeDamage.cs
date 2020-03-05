@@ -8,9 +8,13 @@ public class ArmTakeDamage : MonoBehaviour
 
     ArmHealth armHp;
 
+    CameraShake camShake;
+
     private void Awake()
     {
         armHp = GetComponentInParent<ArmHealth>();
+
+        camShake = Camera.main.GetComponent<CameraShake>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -21,6 +25,7 @@ public class ArmTakeDamage : MonoBehaviour
 
         if (enemy != null)
         {
+            camShake.SmallImpact();
             armHp.currentHealth -= 10;
         }
     }
