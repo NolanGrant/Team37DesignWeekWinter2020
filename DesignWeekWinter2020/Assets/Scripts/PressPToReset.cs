@@ -11,7 +11,7 @@ public class PressPToReset : MonoBehaviour
         if (Input.GetKey("p"))
         {
             print("scene reset");
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }       
     }
 }

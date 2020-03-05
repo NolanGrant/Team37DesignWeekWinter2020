@@ -21,7 +21,7 @@ public class ArmTakeDamage : MonoBehaviour
 
         if (enemy != null)
         {
-            armHp.currentHealth -= 25;
+            armHp.currentHealth -= 10;
         }
     }
 }
