@@ -19,7 +19,7 @@ public class CircleEdgeColliderGenerator : MonoBehaviour
         float angleIncrement = 2f * Mathf.PI / (numberOfVerts -1);
         for (int i = 0; i < numberOfVerts; i++)
         {
-            print(i);
+            //print(i);
             Vector2 newPos = new Vector2(Mathf.Cos(i * angleIncrement) * radius, Mathf.Sin(i * angleIncrement) * radius);
             newVerticies.Add(newPos);
         }
