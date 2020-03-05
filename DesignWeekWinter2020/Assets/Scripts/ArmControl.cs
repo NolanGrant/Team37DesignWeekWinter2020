@@ -34,11 +34,13 @@ public class ArmControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        inputDirection = (new Vector2(horiAxis, vertAxis)).normalized;
+        
     }
 
     private void FixedUpdate()
     {
+        inputDirection = (new Vector2(horiAxis, vertAxis)).normalized;
+
         if (myHealth.destroyed == false)
         {
             targetHand.velocity = (inputDirection * TargetHandMovementForce);
@@ -52,6 +54,10 @@ public class ArmControl : MonoBehaviour
         {
             targetHand.angularVelocity = 0f;
         }
+
+
+        horiAxis = 0;
+        vertAxis = 0;
 
         /*
         if (Input.GetButton("Fire1"))
