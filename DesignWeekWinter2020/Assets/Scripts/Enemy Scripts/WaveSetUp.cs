@@ -30,6 +30,12 @@ public class WaveSetUp : MonoBehaviour
     [SerializeField]
     int clustersPerWave;
 
+    [SerializeField]
+    int unlockRate;
+
+    int unlockNextLine = 0;
+   
+
     void Start()
     {
         InvokeRepeating("SpawnEnemyWave", 1f, spawnRate);
@@ -42,11 +48,14 @@ public class WaveSetUp : MonoBehaviour
         {
             StartCoroutine(WaitForNextWave());
         }
+
     }
 
     IEnumerator WaitForNextWave() 
     {
         wavesSpwned = 0;
+        unlockNextLine++;
+        SwarmChange();
         CancelInvoke("SpawnEnemyWave");
         yield return new WaitForSeconds(TimeBetweenWaves);
         InvokeRepeating("SpawnEnemyWave", 0, spawnRate);
@@ -77,6 +86,16 @@ public class WaveSetUp : MonoBehaviour
     public void DecreaseAliveEnemies() 
     {
         aliveEnemies--;
+    }
+
+    private void SwarmChange() 
+    {
+        if (unlockNextLine%unlockRate == 0 && unlockNextLine>0)
+        {
+            mostDifficultLine++;
+            mostDifficultLine = Mathf.Clamp(mostDifficultLine, 0, LineTypes.Length);
+        }
+
     }
 
 
