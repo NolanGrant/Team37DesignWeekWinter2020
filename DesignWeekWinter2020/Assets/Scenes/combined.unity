@@ -510,7 +510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.22352943, g: 0.34901962, b: 0.83921576, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1721,7 +1721,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693772606}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.37293726, y: 0.31310973, z: 0}
+  m_LocalPosition: {x: 0, y: 0.436, z: 0}
   m_LocalScale: {x: 0.8295126, y: 0.8295126, z: 5.530084}
   m_Children: []
   m_Father: {fileID: 481072266}
@@ -2033,7 +2033,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 25.59, y: 21.3}
+  m_Size: {x: 25.59, y: 21.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2550,7 +2550,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -25
   m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 0.51359504, b: 0, a: 1}
   m_FlipX: 0
@@ -2569,13 +2569,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849690667}
-  m_LocalRotation: {x: -0, y: -0, z: -0.20850912, w: 0.9780204}
-  m_LocalPosition: {x: 0.22675928, y: 0.47591394, z: 0}
-  m_LocalScale: {x: 1.2264621, y: 1.2264621, z: 12.26462}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.616, z: 0}
+  m_LocalScale: {x: 3.46, y: 1.2264621, z: 12.26462}
   m_Children: []
   m_Father: {fileID: 481072266}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -24.07}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &890895163
 GameObject:
   m_ObjectHideFlags: 0
@@ -2833,7 +2833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.10499716, b: 1, a: 1}
+  m_Color: {r: 0.22352943, g: 0.8431373, b: 0.32156864, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2906,7 +2906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.9433962, b: 0.0917871, a: 1}
+  m_Color: {r: 1, g: 0.3066038, b: 0.38778576, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3692,7 +3692,7 @@ GameObject:
   - component: {fileID: 1419273040}
   - component: {fileID: 1419273041}
   m_Layer: 5
-  m_Name: Slider (1)
+  m_Name: Right Arm Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4086,7 +4086,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 25.59, y: 20.7}
+  m_Size: {x: 25.59, y: 21.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4117,7 +4117,7 @@ GameObject:
   - component: {fileID: 1558462006}
   - component: {fileID: 1558462007}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: Left Arm Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4213,7 +4213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1575041966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4513,7 +4513,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1662869119}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.39906242, y: 0.25670287, z: 0}
+  m_LocalPosition: {x: 0, y: -0.458, z: 0}
   m_LocalScale: {x: 0.8295126, y: 0.8295126, z: 5.530084}
   m_Children: []
   m_Father: {fileID: 481072266}
