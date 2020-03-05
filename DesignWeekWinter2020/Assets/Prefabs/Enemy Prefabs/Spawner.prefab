@@ -53,16 +53,21 @@ MonoBehaviour:
   - {fileID: 4380326406659968830, guid: 47251a12d5df6fa4f81b706b4adb3a44, type: 3}
   - {fileID: 8115657418361785916, guid: a5cdec1dcf78a2646a667b79640415ff, type: 3}
   - {fileID: 3475751133613966713, guid: 723c5baf8597b0747911accdcbd61ce1, type: 3}
+  - {fileID: 705753532310316424, guid: 3f68f95859aaba34b8492ce983daaa9c, type: 3}
+  - {fileID: 7261798337318790570, guid: 0bbf2e11aaaaeda4b90459e39f5fcdb0, type: 3}
+  - {fileID: 9032864747349264202, guid: 81945e948caff404bae3dc2540860242, type: 3}
+  - {fileID: 5648424727142198021, guid: 1e09135ec1edd414a88a21488d3a5e75, type: 3}
   SpawnPoints:
   - {fileID: 8950137348156929751}
   - {fileID: 8950137348897810832}
   - {fileID: 8950137348979155598}
   - {fileID: 8950137349592575197}
   leastDifficultLine: 1
-  mostDifficultLine: 4
-  spawnRate: 0
-  TimeBetweenWaves: 0
-  clustersPerWave: 0
+  mostDifficultLine: 2
+  spawnRate: 3.5
+  TimeBetweenWaves: 10
+  clustersPerWave: 4
+  unlockRate: 2
 --- !u!1 &8950137348156929748
 GameObject:
   m_ObjectHideFlags: 0
