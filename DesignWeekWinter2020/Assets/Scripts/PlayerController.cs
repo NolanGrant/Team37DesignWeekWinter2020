@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
         {
             //collision.gameObject.GetComponent<SpriteRenderer>().color = hoverColor;
 
-            if (dockAttempt && !docked)
+            if (Input.GetButtonDown(playerid + "_Action") && !docked)
             {
                 docked = true;
                 transform.position = collision.transform.position;
@@ -102,12 +102,12 @@ public class PlayerController : MonoBehaviour
                 currentGun = console.curArm;
             }
 
-            if (docked)
+            else if (docked)
             {
                 //collision.gameObject.GetComponent<SpriteRenderer>().color = dockedColor;
                 transform.position = collision.transform.position;
                 _body.velocity = new Vector2(0, 0);
-                if (dockAttempt)
+                if (Input.GetButtonDown(playerid + "_Action"))
                 {
                     docked = false;
 
