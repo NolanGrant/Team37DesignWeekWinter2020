@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{b825e190-22d1-42f0-add4-7e9efe3e84d8}">
+		<property name="assetPath">
+			<value>chainsawCut.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.5499999999999998</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{eb7b3d0a-bfd7-4815-8561-32d9c21059fb}</destination>
+		</relationship>
+	</object>
+</objects>

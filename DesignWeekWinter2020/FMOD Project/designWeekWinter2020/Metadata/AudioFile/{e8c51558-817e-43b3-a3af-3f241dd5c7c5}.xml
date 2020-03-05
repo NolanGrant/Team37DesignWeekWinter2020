@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{e8c51558-817e-43b3-a3af-3f241dd5c7c5}">
+		<property name="assetPath">
+			<value>lazershort.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{eb7b3d0a-bfd7-4815-8561-32d9c21059fb}</destination>
+		</relationship>
+	</object>
+</objects>

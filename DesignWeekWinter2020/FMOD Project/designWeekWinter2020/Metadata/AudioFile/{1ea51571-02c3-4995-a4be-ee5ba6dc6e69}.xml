@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{1ea51571-02c3-4995-a4be-ee5ba6dc6e69}">
+		<property name="assetPath">
+			<value>jetengine.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.3039909297052152</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{eb7b3d0a-bfd7-4815-8561-32d9c21059fb}</destination>
+		</relationship>
+	</object>
+</objects>
