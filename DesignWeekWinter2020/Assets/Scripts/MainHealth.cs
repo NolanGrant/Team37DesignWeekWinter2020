@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class MainHealth : MonoBehaviour
 {
-    public static float hp = 100;
+    public static float hp = 200;
 
     public Slider barFill;
     // Start is called before the first frame update
     void Start()
     {
-        barFill.maxValue = 100;
+        barFill.maxValue = hp;
         
     }
 
@@ -23,7 +23,7 @@ public class MainHealth : MonoBehaviour
 
         if(hp <= 0)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
     }
 }
