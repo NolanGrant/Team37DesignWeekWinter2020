@@ -71,37 +71,33 @@ public class PlayerController : MonoBehaviour
         _body.velocity = inputVec * speed;
 
             if (docked)
-        {
-            /*
-            currentGun.transform.RotateAround(ship.transform.position, new Vector3(0,0,1), -0.5f * Input.GetAxis(playerid + "_Horizontal"));
-            //currentGun.transform.Translate(new Vector3(-1,0,0));
-            if (Input.GetButtonDown(playerid + "_Shoot"))
             {
-                currentGun.GetComponent<Guns>().triggerShoot = true;
-            }
-            */
-            if (guntype == 0)
-            {
-                currentGun.GetComponent<ArmControl>().horiAxis = Input.GetAxis(playerid + "_Horizontal");
-                currentGun.GetComponent<ArmControl>().vertAxis = Input.GetAxis(playerid + "_Vertical");
-            }
-            else if (guntype == 1)
-            {
+                /*
+                currentGun.transform.RotateAround(ship.transform.position, new Vector3(0,0,1), -0.5f * Input.GetAxis(playerid + "_Horizontal"));
+                //currentGun.transform.Translate(new Vector3(-1,0,0));
                 if (Input.GetButtonDown(playerid + "_Shoot"))
                 {
-                    Debug.Log("Shoot");
                     currentGun.GetComponent<Guns>().triggerShoot = true;
                 }
-            }
-            else if (guntype == 2)
-            {
-                if (Input.GetButtonDown(playerid + "_Shoot"))
+                */
+                if (guntype == 0)
                 {
-                    Debug.Log("Shoot");
-                    currentGun.GetComponent<Guns>().triggerShoot = true;
+                    currentGun.GetComponent<ArmControl>().horiAxis = Input.GetAxis(playerid + "_Horizontal");
+                    currentGun.GetComponent<ArmControl>().vertAxis = Input.GetAxis(playerid + "_Vertical");
+                }
+                else if (guntype == 1)
+                {
+                    if (Input.GetButtonDown(playerid + "_Shoot"))
+                    {
+                        Debug.Log("Shoot");
+                        currentGun.GetComponent<Guns>().triggerShoot = true;
+                    }
+                }
+                else if (guntype == 2)
+                {
+                    currentGun.GetComponent<ShipMovement>().movement = Input.GetAxis(playerid + "_Horizontal");
                 }
             }
-        }
     }
 
     void OnTriggerStay2D(Collider2D collision)
