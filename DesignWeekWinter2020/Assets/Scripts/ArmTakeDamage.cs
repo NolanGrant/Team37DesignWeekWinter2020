@@ -5,16 +5,12 @@ using UnityEngine;
 public class ArmTakeDamage : MonoBehaviour
 {
     public GameObject arm;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    ArmHealth armHp;
+
+    private void Awake()
     {
-        
+        armHp = GetComponentInParent<ArmHealth>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -23,10 +19,9 @@ public class ArmTakeDamage : MonoBehaviour
 
         EnemyMovement enemy = col.GetComponent<EnemyMovement>();
 
-        if(enemy != null)
+        if (enemy != null)
         {
-            arm.GetComponent<ArmHealth>().currentHealth -= 25;
+            armHp.currentHealth -= 25;
         }
-        
     }
 }

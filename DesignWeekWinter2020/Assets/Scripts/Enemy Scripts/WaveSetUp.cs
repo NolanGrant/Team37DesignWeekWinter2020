@@ -70,8 +70,6 @@ public class WaveSetUp : MonoBehaviour
 
             int lineType = Random.Range(leastDifficultLine, mostDifficultLine + 1);
             Instantiate(LineTypes[lineType - 1], SpawnPoints[i].position, Quaternion.identity);
-            
-
         }
 
         wavesSpwned++;

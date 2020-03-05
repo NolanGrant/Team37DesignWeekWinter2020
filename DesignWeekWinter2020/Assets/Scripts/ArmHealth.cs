@@ -40,7 +40,12 @@ public class ArmHealth : MonoBehaviour
         {
             destroyed = true;
             myChainsaw.enabled = false;
-            Invoke("RepairArm", disabledDuration);
+
+            foreach (Collider2D col in armColliders)
+            {
+                col.enabled = false;
+            }
+
             foreach (GameObject armSegment in armSegments)
             {
                 Instantiate(armSegmentExplosionPrefab, armSegment.transform.position, Quaternion.identity);
@@ -49,16 +54,13 @@ public class ArmHealth : MonoBehaviour
                     sprite.color = disabledColor;
                 }
             }
-            foreach(Collider2D col in armColliders)
-            {
-                col.enabled = false;
-            }
+            
+            Invoke("RepairArm", disabledDuration);
         }
     }
 
     public void RepairArm()
     {
-        print("repar");
         destroyed = false;
         myChainsaw.enabled = true;
         currentHealth = maxHealth;
