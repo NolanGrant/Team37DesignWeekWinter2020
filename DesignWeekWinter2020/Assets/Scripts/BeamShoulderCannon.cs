@@ -4,16 +4,32 @@ using UnityEngine;
 
 public class BeamShoulderCannon : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    SpriteRenderer sr;
+
+    public float fliptime = 0.1f;
+    float flipTimer;
+
+    private void Awake()
     {
-        
+        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        flipTimer += Time.deltaTime;
+
+        if(sr.flipX == true && flipTimer > fliptime)
+        {
+            flipTimer = 0;
+            sr.flipX = false;
+        }
+
+        else if (sr.flipX == false && flipTimer > fliptime)
+        {
+            flipTimer = 0;
+            sr.flipX = true;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)

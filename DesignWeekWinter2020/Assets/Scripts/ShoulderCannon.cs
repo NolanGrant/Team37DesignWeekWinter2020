@@ -15,6 +15,8 @@ public class ShoulderCannon : MonoBehaviour
     public float beamLife;
     private float beamTimer;
 
+    public GameObject chargeParticles;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,9 @@ public class ShoulderCannon : MonoBehaviour
     {
         if (GetComponent<Guns>().triggerShoot && !shoulderCannonShooting)
         {
+            GameObject newChargeParticles = Instantiate(chargeParticles, transform.position, Quaternion.identity);
+            newChargeParticles.GetComponent<SelfDestruct>().lifespan = chargeTime;
+
             shoulderCannonShooting = true;
         }
 
