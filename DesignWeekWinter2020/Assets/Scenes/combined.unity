@@ -1645,6 +1645,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8950137348156929751, guid: 0cd599f7d8a0ec04abd6285ebb23b8ab,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950137348897810832, guid: 0cd599f7d8a0ec04abd6285ebb23b8ab,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950137349592575197, guid: 0cd599f7d8a0ec04abd6285ebb23b8ab,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cd599f7d8a0ec04abd6285ebb23b8ab, type: 3}
 --- !u!1 &677188977
@@ -3532,6 +3547,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: p2 arm
       objectReference: {fileID: 0}
+    - target: {fileID: 5826927525409339857, guid: 45e033a65bb15bc4a89831810a6f491a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5826927526046723363, guid: 45e033a65bb15bc4a89831810a6f491a,
         type: 3}
       propertyPath: armHPSlider
@@ -3597,6 +3617,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 5826927525949331355, guid: 45e033a65bb15bc4a89831810a6f491a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 722404930, guid: 45e033a65bb15bc4a89831810a6f491a, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -3633,11 +3658,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 5826927525409339857, guid: 45e033a65bb15bc4a89831810a6f491a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 5826927525409339871, guid: 45e033a65bb15bc4a89831810a6f491a,
         type: 3}
       propertyPath: m_AngleLimits.m_UpperAngle
@@ -3673,11 +3693,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AngleLimits.m_UpperAngle
       value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5826927525949331355, guid: 45e033a65bb15bc4a89831810a6f491a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45e033a65bb15bc4a89831810a6f491a, type: 3}
