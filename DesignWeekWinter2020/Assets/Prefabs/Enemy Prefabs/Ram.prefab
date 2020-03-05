@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1361140092014105625}
   - component: {fileID: 5821158796784589514}
   - component: {fileID: 1702050489064708240}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Ram
   m_TagString: Untagged
   m_Icon: {fileID: 0}
