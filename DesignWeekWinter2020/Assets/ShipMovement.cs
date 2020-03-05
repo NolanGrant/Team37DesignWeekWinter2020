@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControlConsole : MonoBehaviour
+public class ShipMovement : MonoBehaviour
 {
-    public GameObject curArm;
-    public int type;
     // Start is called before the first frame update
     void Start()
     {

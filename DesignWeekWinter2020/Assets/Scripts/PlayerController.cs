@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
     private bool docked = false;
 
     GameObject currentGun;
+
+    private int guntype;
     // Start is called before the first frame update
     void Start()
     {
@@ -68,7 +70,7 @@ public class PlayerController : MonoBehaviour
         //vely = deltaY - vely;
         _body.velocity = inputVec * speed;
 
-        if (docked)
+            if (docked)
         {
             /*
             currentGun.transform.RotateAround(ship.transform.position, new Vector3(0,0,1), -0.5f * Input.GetAxis(playerid + "_Horizontal"));
@@ -78,8 +80,27 @@ public class PlayerController : MonoBehaviour
                 currentGun.GetComponent<Guns>().triggerShoot = true;
             }
             */
-            currentGun.GetComponent<ArmControl>().horiAxis = Input.GetAxis(playerid + "_Horizontal");
-            currentGun.GetComponent<ArmControl>().vertAxis = Input.GetAxis(playerid + "_Vertical");
+            if (guntype == 0)
+            {
+                currentGun.GetComponent<ArmControl>().horiAxis = Input.GetAxis(playerid + "_Horizontal");
+                currentGun.GetComponent<ArmControl>().vertAxis = Input.GetAxis(playerid + "_Vertical");
+            }
+            else if (guntype == 1)
+            {
+                if (Input.GetButtonDown(playerid + "_Shoot"))
+                {
+                    Debug.Log("Shoot");
+                    currentGun.GetComponent<Guns>().triggerShoot = true;
+                }
+            }
+            else if (guntype == 2)
+            {
+                if (Input.GetButtonDown(playerid + "_Shoot"))
+                {
+                    Debug.Log("Shoot");
+                    currentGun.GetComponent<Guns>().triggerShoot = true;
+                }
+            }
         }
     }
 
@@ -100,6 +121,7 @@ public class PlayerController : MonoBehaviour
                 _body.velocity = new Vector2(0, 0);
                 dockAttempt = false;
                 currentGun = console.curArm;
+                guntype = console.GetComponent<ControlConsole>().type;
             }
 
             else if (docked)
