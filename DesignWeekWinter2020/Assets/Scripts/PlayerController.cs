@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
 
     public GameObject currentGun;
 
+    public PlayerController otherPlayer;
+
     private int guntype;
 
     [FMODUnity.EventRef]
@@ -136,7 +138,7 @@ public class PlayerController : MonoBehaviour
         {
             //collision.gameObject.GetComponent<SpriteRenderer>().color = hoverColor;
 
-            if (Input.GetButtonDown(playerid + "_Action") && !docked)
+            if (Input.GetButtonDown(playerid + "_Action") && !docked && otherPlayer.currentGun != console.curArm)
             {
                 docked = true;
                 transform.position = collision.transform.position;

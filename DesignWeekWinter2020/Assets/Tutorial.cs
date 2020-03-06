@@ -82,6 +82,12 @@ public class Tutorial : MonoBehaviour
 
         if (leftHit == null && rightHit == null)
         {
+            if(leftarrow != null && rightarrow != null)
+            {
+                Destroy(leftarrow);
+                Destroy(rightarrow);
+            }
+            
             uparrow.SetActive(true);
             downarrow.SetActive(true);
             leftHit2.SetActive(true);
