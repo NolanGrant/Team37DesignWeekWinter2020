@@ -91,24 +91,36 @@ public class EnemyPatternSpawner : MonoBehaviour
         newPatternScript.mySpawner = this;
     }
 
+    public float breakBetweenLevels = 1.5f;
+
     public void TrailerPassed()
     {
-        SelectPatternToSpawn();
-
         if (currentDifficulty >= 1)
         {
             currentLevelPatternProgress += 1;
         }
+
+
+
         if (difficulty0Progression >= difficulty0Patterns.Length && canGoToLevel1 == true)
         {
             canGoToLevel1 = false;
             currentDifficulty = 1;
             currentLevelPatternProgress = 0;
+
+            Invoke("SelectPatternToSpawn", breakBetweenLevels);
         }
-        if(currentLevelPatternProgress >= patternsToProgressDifficultyLevel[currentLevelPatternProgress])
+
+        else if (currentLevelPatternProgress >= patternsToProgressDifficultyLevel[currentLevelPatternProgress])
         {
             currentLevelPatternProgress = 0;
             currentDifficulty = Mathf.Clamp(currentDifficulty + 1, 0, 5);
+
+            Invoke("SelectPatternToSpawn", breakBetweenLevels);
+        }
+        else
+        {
+            SelectPatternToSpawn();
         }
     }
 }
