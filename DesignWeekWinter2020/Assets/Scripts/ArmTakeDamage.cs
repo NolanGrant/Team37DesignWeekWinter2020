@@ -36,5 +36,14 @@ public class ArmTakeDamage : MonoBehaviour
             armHp.currentHealth -= 200;
 
         }
+
+        PeaShooterFire pea = col.GetComponent<PeaShooterFire>();
+
+        if (pea != null)
+        {
+            camShake.SmallImpact();
+            armHp.currentHealth -= 10;
+            Destroy(collision.gameObject);
+        }
     }
 }
