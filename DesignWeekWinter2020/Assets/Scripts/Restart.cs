@@ -16,7 +16,7 @@ public class Restart : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
-            MainHealth.hp = 200;
+            MainHealth.hp = 500;
             Score.score = 0;
             SceneManager.LoadScene(1);
         }

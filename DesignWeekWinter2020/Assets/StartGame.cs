@@ -16,7 +16,7 @@ public class StartGame : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha4))
         {
-            MainHealth.hp = 200;
+            MainHealth.hp = 500;
             Score.score = 0;
             SceneManager.LoadScene(1);
         }

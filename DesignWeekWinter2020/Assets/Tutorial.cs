@@ -43,7 +43,7 @@ public class Tutorial : MonoBehaviour
         {
             setup.SetActive(true);
 
-            //Destroy(skiptext);
+            Destroy(skiptext);
             Destroy(this.gameObject);
         }
 
@@ -76,18 +76,12 @@ public class Tutorial : MonoBehaviour
 
             setup.SetActive(true);
 
-            //Destroy(skiptext);
+            Destroy(skiptext);
             Destroy(this.gameObject);
         }
 
         if (leftHit == null && rightHit == null)
         {
-            if(leftarrow != null && rightarrow != null)
-            {
-                Destroy(leftarrow);
-                Destroy(rightarrow);
-            }
-            
             uparrow.SetActive(true);
             downarrow.SetActive(true);
             leftHit2.SetActive(true);

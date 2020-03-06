@@ -11,6 +11,8 @@ public class ShipMovement : MonoBehaviour
     public GameObject leftThruster;
     public GameObject rightThruster;
 
+    public float resetRate = 0.5f;
+
     public float maxHorizontalMovement;
     // Start is called before the first frame update
     void Start()
@@ -36,6 +38,8 @@ public class ShipMovement : MonoBehaviour
         }
         else
         {
+            _body.position = new Vector2(_body.position.x * (1 - (resetRate * Time.deltaTime)), _body.position.y);
+
             rightThruster.SetActive(false);
             leftThruster.SetActive(false);
         }
