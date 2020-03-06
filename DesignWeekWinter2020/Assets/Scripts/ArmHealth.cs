@@ -21,6 +21,10 @@ public class ArmHealth : MonoBehaviour
 
     CameraShake camShake;
 
+    bool invincibleToInstaKills = false;
+    public float armInvincibilityDurationAfterRepair = 0.5f;
+    float InvincibilityTimer = 0f;
+
     private void Awake()
     {
         myChainsaw = GetComponentInChildren<Chainsaw>();
@@ -64,6 +68,30 @@ public class ArmHealth : MonoBehaviour
         }
     }
 
+    public void TakeLethalDamage()
+    {
+        if(invincibleToInstaKills == false)
+        {
+            currentHealth = 0;
+        }
+        else
+        {
+
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if(invincibleToInstaKills == true)
+        {
+            InvincibilityTimer += Time.fixedDeltaTime;
+            if(InvincibilityTimer >= armInvincibilityDurationAfterRepair)
+            {
+                invincibleToInstaKills = false;
+            }
+        }
+    }
+
     public void RepairArm()
     {
         destroyed = false;
@@ -77,5 +105,7 @@ public class ArmHealth : MonoBehaviour
         {
             col.enabled = true;
         }
+        invincibleToInstaKills = true;
+        InvincibilityTimer = 0;
     }
 }

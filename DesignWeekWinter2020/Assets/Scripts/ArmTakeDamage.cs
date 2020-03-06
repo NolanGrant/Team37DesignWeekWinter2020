@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class ArmTakeDamage : MonoBehaviour
 {
-    public GameObject arm;
-
     ArmHealth armHp;
-
     CameraShake camShake;
+
 
     private void Awake()
     {
@@ -17,24 +15,21 @@ public class ArmTakeDamage : MonoBehaviour
         camShake = Camera.main.GetComponent<CameraShake>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-       
-        GameObject col = collision.gameObject;
-
-        EnemyMovement enemy = col.GetComponent<EnemyMovement>();
-
-        if (enemy != null)
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
             camShake.SmallImpact();
             armHp.currentHealth -= 10;
         }
+    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.gameObject.layer == LayerMask.NameToLayer("OnlyInteractEnemies"))
         {
             Debug.Log("Hit");
             armHp.currentHealth -= 200;
-
         }
     }
 }

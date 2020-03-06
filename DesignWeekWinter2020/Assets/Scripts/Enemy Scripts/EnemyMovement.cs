@@ -28,7 +28,7 @@ public class EnemyMovement : MonoBehaviour
     public GameObject explosionPrefab;
     public GameObject scorePop;
 
-    private WaveSetUp Spawner;
+    //private WaveSetUp Spawner;
 
     Vector3 startingPos;
 
@@ -44,8 +44,8 @@ public class EnemyMovement : MonoBehaviour
     {
 
         startingPos = transform.position;
-        Spawner = GameObject.Find("Spawner").GetComponent<WaveSetUp>();
-        Spawner.IncreaseAliveEnemies();
+        //Spawner = GameObject.Find("Spawner").GetComponent<WaveSetUp>();
+        //Spawner.IncreaseAliveEnemies();
         EndPoint = GameObject.Find("EndPoint").transform;
 
         scream = FMODUnity.RuntimeManager.CreateInstance(screamEvent);
@@ -64,7 +64,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoveDown();
+        //MoveDown();
         CheckOutOfBounds();
     }
     void MoveDown()
@@ -98,7 +98,7 @@ public class EnemyMovement : MonoBehaviour
 
             MainHealth.hp -= 5;
 
-            Spawner.DecreaseAliveEnemies();
+            //Spawner.DecreaseAliveEnemies();
             Destroy(this.gameObject);
         }
 
@@ -117,7 +117,7 @@ public class EnemyMovement : MonoBehaviour
         score.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
         score.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform);
         Score.score += 50;
-        Spawner.DecreaseAliveEnemies();
+        //Spawner.DecreaseAliveEnemies();
         Destroy(this.gameObject);
     }
 
@@ -132,7 +132,7 @@ public class EnemyMovement : MonoBehaviour
             MainHealth.hp -= 5;
             scream.start();
             Destroy(this.gameObject);
-            Spawner.DecreaseAliveEnemies();
+            //Spawner.DecreaseAliveEnemies();
         }
     
     }
