@@ -75,6 +75,7 @@ public class EnemyPatternSpawner : MonoBehaviour
         if (currentDifficulty == 0)
         {
             newPattern = Instantiate(patternsToSpawnFrom[Mathf.Clamp(difficulty0Progression, 0, difficulty0Patterns.Length)], spawnPoint.transform.position, Quaternion.identity);
+            difficulty0Progression += 1;
         }
         else
         {
