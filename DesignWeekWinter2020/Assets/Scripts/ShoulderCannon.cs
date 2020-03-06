@@ -19,6 +19,8 @@ public class ShoulderCannon : MonoBehaviour
 
     public bool beamactive = false;
 
+    private bool partMade = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,20 +52,37 @@ public class ShoulderCannon : MonoBehaviour
 
         }
         */
+        if (beamactive)
+        {
+            currentTime += Time.deltaTime;
+        }
+        
 
-        if (beamactive == true && currentBeam == null)
+
+        if (beamactive == true && currentBeam == null && currentTime < chargeTime && !partMade)
+        {
+            GameObject newChargeParticles = Instantiate(chargeParticles, transform.position, Quaternion.identity);
+            newChargeParticles.GetComponent<SelfDestruct>().lifespan = chargeTime;
+            newChargeParticles.transform.SetParent(GameObject.FindGameObjectWithTag("Ship").transform);
+            newChargeParticles.transform.localScale = new Vector3(1, 1, 1);
+            partMade = true;
+        }
+        else if (beamactive == true && currentBeam == null && currentTime >= chargeTime)
         {
             GameObject instantiatedBeam = GameObject.Instantiate(laserBeam, transform.position, transform.rotation) as GameObject;
             currentBeam = instantiatedBeam;
+            currentTime = 0;
+            
         }
 
         if (currentBeam != null)
         {
-            if (!beamactive)
+            if(currentTime > beamLife)
             {
                 currentTime = 0;
                 beamTimer = 0;
                 DestroyImmediate(currentBeam);
+                partMade = false;
             }
         }
 
