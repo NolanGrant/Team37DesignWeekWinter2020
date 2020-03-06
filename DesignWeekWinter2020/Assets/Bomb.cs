@@ -24,7 +24,7 @@ public class Bomb : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("RightWeapon") ||
             collision.gameObject.layer == LayerMask.NameToLayer("LeftWeapon"))
         {
-            collision.GetComponentInParent<ArmHealth>().currentHealth = 0;
+            collision.GetComponentInParent<ArmHealth>().TakeLethalDamage();
 
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
 
