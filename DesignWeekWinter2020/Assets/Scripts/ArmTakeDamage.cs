@@ -29,10 +29,10 @@ public class ArmTakeDamage : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("OnlyInteractEnemies"))
         {
             Debug.Log("Hit");
-            armHp.currentHealth -= 200;
+            armHp.TakeLethalDamage();
         }
 
-        PeaShooterFire pea = col.GetComponent<PeaShooterFire>();
+        PeaShooterFire pea = collision.gameObject.GetComponent<PeaShooterFire>();
 
         if (pea != null)
         {

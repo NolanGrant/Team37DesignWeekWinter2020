@@ -30,7 +30,7 @@ public class PatternMover : MonoBehaviour
         if (trailer.transform.position.y < mySpawner.spawnPoint.transform.position.y && canSpawnNextWave == true)
         {
             canSpawnNextWave = false;
-            mySpawner.SpawnPattern();
+            mySpawner.SelectPatternToSpawn();
         }
     }
 }
