@@ -27,6 +27,9 @@ public class EnemyPatternSpawner : MonoBehaviour
 
     public int currentLevelPatternProgress = 0;
 
+    int highLevelSpeedIncrementer;
+    float highLevelSpeedamount = .2f;
+
     private void Awake()
     {
         patternsToProgressDifficultyLevel[0] = difficulty0Patterns.Length;
@@ -87,6 +90,10 @@ public class EnemyPatternSpawner : MonoBehaviour
         }
         PatternMover newPatternScript = newPattern.GetComponent<PatternMover>();
         newPatternScript.mySpawner = this;
+        if(currentLevelPatternProgress >= 10)
+        {
+            newPatternScript.movespeed += Mathf.Clamp(currentLevelPatternProgress - 10, 0, 5) * highLevelSpeedamount;
+        }
     }
 
     public float breakBetweenLevels = 1.5f;

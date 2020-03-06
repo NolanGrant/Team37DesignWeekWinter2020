@@ -6350,7 +6350,7 @@ GameObject:
   - component: {fileID: 8920452320930368920}
   - component: {fileID: 8920452320930368923}
   m_Layer: 0
-  m_Name: 1_0 triple lin 1
+  m_Name: 1_0 triple lin 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6389,7 +6389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204e0000c86997445931cd87991f2c59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeed: 2.5
+  movespeed: 4
   mySpawner: {fileID: 0}
   trailer: {fileID: 8920452322104398493}
 --- !u!1 &8920452321674953588

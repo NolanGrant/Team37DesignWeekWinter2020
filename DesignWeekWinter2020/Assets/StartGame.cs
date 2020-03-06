@@ -8,7 +8,7 @@ public class StartGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+            Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -16,7 +16,7 @@ public class StartGame : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha4))
         {
-            MainHealth.hp = 500;
+            MainHealth.hp = 400;
             Score.score = 0;
             SceneManager.LoadScene(1);
         }

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MainHealth : MonoBehaviour
 {
-    public static float hp = 500;
+    public static float hp = 400;
 
     public bool godmode = false;
 

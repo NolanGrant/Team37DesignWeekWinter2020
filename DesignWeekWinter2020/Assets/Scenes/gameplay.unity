@@ -7171,6 +7171,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.x
       value: -0.38999966
       objectReference: {fileID: 0}
+    - target: {fileID: 7851473582387270272, guid: 85efe963083ab71459a355209452815a,
+        type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: -100
+      objectReference: {fileID: 0}
     - target: {fileID: 7851473582941796775, guid: 85efe963083ab71459a355209452815a,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -12821,24 +12826,29 @@ MonoBehaviour:
   - {fileID: 8920452320930368921, guid: 602304d6d36d49c4f84245949e30dee4, type: 3}
   - {fileID: 108249363293989580, guid: 8516c159a55d72446b0ee77187bffe87, type: 3}
   - {fileID: 1707103732806077365, guid: a3b7cf2aea0ea164b88b3d54f1483338, type: 3}
-  - {fileID: 677499322082516174, guid: 1e7fc6ce3e53feb44b363a9afd340da9, type: 3}
+  - {fileID: 108249363293989580, guid: 199c250984bdb7e4786d894643dd1e8e, type: 3}
   difficulty4Patterns:
   - {fileID: 2250999382528682724, guid: 0a21754c80004814b896a55474c382d0, type: 3}
   - {fileID: 108249363293989580, guid: 8516c159a55d72446b0ee77187bffe87, type: 3}
   - {fileID: 8920452320930368921, guid: 3a36a770aded97e4294ceac5361707b5, type: 3}
+  - {fileID: 108249363293989580, guid: b95b4c3ac163b43499739de6b5a50bc9, type: 3}
+  - {fileID: 108249363293989580, guid: 199c250984bdb7e4786d894643dd1e8e, type: 3}
   - {fileID: 2013169355013046727, guid: 6ea3c64d5b15fbd42bc2103ec0419eab, type: 3}
+  - {fileID: 677499322082516174, guid: 1e7fc6ce3e53feb44b363a9afd340da9, type: 3}
   difficulty5Patterns:
   - {fileID: 2013169355013046727, guid: 6ea3c64d5b15fbd42bc2103ec0419eab, type: 3}
   - {fileID: 2250999382528682724, guid: b47a2906d62354b4aa2137ab9e506f88, type: 3}
   - {fileID: 108249363293989580, guid: 199c250984bdb7e4786d894643dd1e8e, type: 3}
   - {fileID: 108249363293989580, guid: b95b4c3ac163b43499739de6b5a50bc9, type: 3}
   - {fileID: 8920452320930368921, guid: ee4d6d85eceddcb49b03443ee24caf3b, type: 3}
-  - {fileID: 8920452320930368921, guid: 00e55a7e9476b0e4a8ef74ca83273a61, type: 3}
-  patternsToProgressDifficultyLevel: 000000000500000005000000050000000500000005000000
+  - {fileID: 765919237791824055, guid: b72a7c6cc9eaeb044ba2bf2d812b6f6e, type: 3}
+  - {fileID: 765919237791824055, guid: 30f956628a76792488b06eecb09bc57a, type: 3}
+  - {fileID: 677499322082516174, guid: 1e7fc6ce3e53feb44b363a9afd340da9, type: 3}
+  patternsToProgressDifficultyLevel: 000000000400000007000000070000000700000007000000
   canGoToLevel1: 1
   difficulty0Progression: 0
   currentLevelPatternProgress: 0
-  breakBetweenLevels: 3
+  breakBetweenLevels: 6
 --- !u!4 &897865629
 Transform:
   m_ObjectHideFlags: 0
@@ -23577,6 +23587,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.x
       value: -0.38999966
       objectReference: {fileID: 0}
+    - target: {fileID: 8052550496323017717, guid: 45e033a65bb15bc4a89831810a6f491a,
+        type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 8052550496820753843, guid: 45e033a65bb15bc4a89831810a6f491a,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -25480,7 +25495,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1780706309
 MonoBehaviour:
   m_ObjectHideFlags: 0
