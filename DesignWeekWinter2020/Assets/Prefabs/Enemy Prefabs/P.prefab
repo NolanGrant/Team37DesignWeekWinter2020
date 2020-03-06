@@ -159,3 +159,4 @@ MonoBehaviour:
   bullet: {fileID: 4501077814745784417, guid: 8a6ec609bba55cc4dbad1f9123c75705, type: 3}
   fireRate: 2
   bulletSpeed: 7
+  speed: 0.1

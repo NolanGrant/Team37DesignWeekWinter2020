@@ -12,10 +12,22 @@ public class EnemyShooting : MonoBehaviour
 
     [SerializeField]
     float bulletSpeed;
+
+    public float speed;
     // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("FireBullet", 1f, fireRate);
+        transform.parent = null;
+    }
+
+    private void Update()
+    {
+        if(transform.position.y > 6)
+        {
+            transform.Translate(transform.up * -speed);
+        }
+        
     }
 
     private void FireBullet() 
