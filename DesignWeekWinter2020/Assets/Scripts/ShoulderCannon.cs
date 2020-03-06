@@ -56,6 +56,7 @@ public class ShoulderCannon : MonoBehaviour
         {
             currentTime += Time.deltaTime;
         }
+        beamTimer += Time.deltaTime;
         
 
 
@@ -72,12 +73,12 @@ public class ShoulderCannon : MonoBehaviour
             GameObject instantiatedBeam = GameObject.Instantiate(laserBeam, transform.position, transform.rotation) as GameObject;
             currentBeam = instantiatedBeam;
             currentTime = 0;
-            
+            beamTimer = 0;
         }
 
         if (currentBeam != null)
         {
-            if(currentTime > beamLife)
+            if(beamTimer > beamLife)
             {
                 currentTime = 0;
                 beamTimer = 0;

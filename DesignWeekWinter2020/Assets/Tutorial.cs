@@ -18,6 +18,8 @@ public class Tutorial : MonoBehaviour
 
     public GameObject leftGun;
     public GameObject rightGun;
+    public GameObject upGun;
+    public GameObject downGun;
 
     public GameObject leftHit;
     public GameObject rightHit;
@@ -26,6 +28,7 @@ public class Tutorial : MonoBehaviour
 
     public WaveSetUp setup;
 
+    public GameObject skiptext;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,13 +37,20 @@ public class Tutorial : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        if(Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Instantiate(setup, new Vector3(0, 10, 0), new Quaternion(0, 0, 0, 0));
+            Destroy(skiptext);
+            Destroy(this.gameObject);
+        }
+
         if(p1.currentGun ==  leftGun && p2.currentGun == rightGun || p1.currentGun == rightGun && p2.currentGun == leftGun)
         {
             Destroy(leftarrow);
             Destroy(rightarrow);
-            Destroy(controls);
+            
             if(cam.transform.position.y < 0)
             {
                 cam.transform.Translate(transform.up * camspeed);
@@ -51,20 +61,28 @@ public class Tutorial : MonoBehaviour
             }
         }
 
-        if(leftHit == null && rightHit == null)
+        if (p1.currentGun == upGun && p2.currentGun == downGun || p1.currentGun == upGun && p2.currentGun == downGun)
+        {
+            Destroy(uparrow);
+            Destroy(downarrow);
+            Destroy(controls);
+        }
+
+
+        if (leftHit2 == null && rightHit2 == null)
+        {
+            Debug.Log("YUP");
+            Instantiate(setup, new Vector3(0, 10, 0), new Quaternion(0,0,0,0));
+            Destroy(skiptext);
+            Destroy(this.gameObject);
+        }
+
+        if (leftHit == null && rightHit == null)
         {
             uparrow.SetActive(true);
             downarrow.SetActive(true);
             leftHit2.SetActive(true);
             rightHit2.SetActive(true);
-        }
-
-        if (leftHit2 == null && rightHit2 == null)
-        {
-            leftHit2.SetActive(false);
-            rightHit2.SetActive(false);
-            setup.ready = true;
-            Destroy(this.gameObject);
         }
 
 

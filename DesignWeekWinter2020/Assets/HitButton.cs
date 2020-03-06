@@ -5,6 +5,8 @@ using UnityEngine;
 public class HitButton : MonoBehaviour
 {
     public string direction;
+
+    public GameObject explosion;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,7 @@ public class HitButton : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer(direction))
         {
+            Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
 
         }    
