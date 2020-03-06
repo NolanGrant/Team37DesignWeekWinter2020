@@ -21,6 +21,12 @@ public class EnemyPatternSpawner : MonoBehaviour
     [Header("patternsToProgressDifficultyLevel")]
     public int[] patternsToProgressDifficultyLevel;
 
+    public bool canGoToLevel1 = true;
+
+    public int difficulty0Progression = 0;
+
+    public int currentLevelPatternProgress = 0;
+
     private void Awake()
     {
         patternsToProgressDifficultyLevel[0] = difficulty0Patterns.Length;
@@ -68,13 +74,13 @@ public class EnemyPatternSpawner : MonoBehaviour
         }
     }
 
-    int difficulty0Progression = 0;
+
     void SpawnSelectedPattern(GameObject[] patternsToSpawnFrom)
     {
         GameObject newPattern;
         if (currentDifficulty == 0)
         {
-            newPattern = Instantiate(patternsToSpawnFrom[Mathf.Clamp(difficulty0Progression, 0, difficulty0Patterns.Length)], spawnPoint.transform.position, Quaternion.identity);
+            newPattern = Instantiate(patternsToSpawnFrom[Mathf.Clamp(difficulty0Progression, 0, difficulty0Patterns.Length - 1)], spawnPoint.transform.position, Quaternion.identity);
             difficulty0Progression += 1;
         }
         else
@@ -88,5 +94,21 @@ public class EnemyPatternSpawner : MonoBehaviour
     public void TrailerPassed()
     {
         SelectPatternToSpawn();
+
+        if (currentDifficulty >= 1)
+        {
+            currentLevelPatternProgress += 1;
+        }
+        if (difficulty0Progression >= difficulty0Patterns.Length && canGoToLevel1 == true)
+        {
+            canGoToLevel1 = false;
+            currentDifficulty = 1;
+            currentLevelPatternProgress = 0;
+        }
+        if(currentLevelPatternProgress >= patternsToProgressDifficultyLevel[currentLevelPatternProgress])
+        {
+            currentLevelPatternProgress = 0;
+            currentDifficulty = Mathf.Clamp(currentDifficulty + 1, 0, 5);
+        }
     }
 }

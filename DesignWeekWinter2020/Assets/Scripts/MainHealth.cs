@@ -8,6 +8,8 @@ public class MainHealth : MonoBehaviour
 {
     public static float hp = 200;
 
+    public bool godmode = false;
+
     public Slider barFill;
     // Start is called before the first frame update
     void Start()
@@ -21,7 +23,7 @@ public class MainHealth : MonoBehaviour
     {
         barFill.value = hp;
 
-        if(hp <= 0)
+        if(hp <= 0 && godmode == false)
         {
             SceneManager.LoadScene(2);
         }

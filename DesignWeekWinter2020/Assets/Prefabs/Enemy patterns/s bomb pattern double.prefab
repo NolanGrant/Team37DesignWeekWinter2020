@@ -431,7 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204e0000c86997445931cd87991f2c59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeed: 6
+  movespeed: 25
   mySpawner: {fileID: 0}
   trailer: {fileID: 2013169355986771651}
 --- !u!1 &2013169355319603073
