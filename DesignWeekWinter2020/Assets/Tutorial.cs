@@ -26,7 +26,7 @@ public class Tutorial : MonoBehaviour
     public GameObject leftHit2;
     public GameObject rightHit2;
 
-    public WaveSetUp setup;
+    public GameObject setup;
 
     public GameObject skiptext;
     // Start is called before the first frame update
@@ -41,8 +41,9 @@ public class Tutorial : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Instantiate(setup, new Vector3(0, 10, 0), new Quaternion(0, 0, 0, 0));
-            Destroy(skiptext);
+            setup.SetActive(true);
+
+            //Destroy(skiptext);
             Destroy(this.gameObject);
         }
 
@@ -51,14 +52,14 @@ public class Tutorial : MonoBehaviour
             Destroy(leftarrow);
             Destroy(rightarrow);
             
-            if(cam.transform.position.y < 0)
-            {
-                cam.transform.Translate(transform.up * camspeed);
-            }
-            if (cam.GetComponent<Camera>().orthographicSize < 10)
-            {
-                cam.GetComponent<Camera>().orthographicSize += camspeed;
-            }
+            //if(cam.transform.position.y < 0)
+            //{
+            //    cam.transform.Translate(transform.up * camspeed);
+            //}
+            //if (cam.GetComponent<Camera>().orthographicSize < 10)
+            //{
+            //    cam.GetComponent<Camera>().orthographicSize += camspeed;
+            //}
         }
 
         if (p1.currentGun == upGun && p2.currentGun == downGun || p1.currentGun == upGun && p2.currentGun == downGun)
@@ -72,8 +73,10 @@ public class Tutorial : MonoBehaviour
         if (leftHit2 == null && rightHit2 == null)
         {
             Debug.Log("YUP");
-            Instantiate(setup, new Vector3(0, 10, 0), new Quaternion(0,0,0,0));
-            Destroy(skiptext);
+
+            setup.SetActive(true);
+
+            //Destroy(skiptext);
             Destroy(this.gameObject);
         }
 

@@ -511,6 +511,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: RightWeapon
+  explosion: {fileID: 8233719179907812970, guid: de3039d215da7cc4dad2fd9c344ce729,
+    type: 3}
 --- !u!1 &110017779054327713
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,6 +624,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: LeftWeapon
+  explosion: {fileID: 8233719179907812970, guid: de3039d215da7cc4dad2fd9c344ce729,
+    type: 3}
 --- !u!1 &110017779706231078
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,7 +638,7 @@ GameObject:
   - component: {fileID: 110017779706231082}
   - component: {fileID: 110017779706231081}
   - component: {fileID: 110017779706231080}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Hit Button (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -733,6 +737,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: OnlyInteractEnemies
+  explosion: {fileID: 8233719179907812970, guid: 649dd84f77f522c41a61b66856a9ada7,
+    type: 3}
 --- !u!1 &110017779788580191
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,7 +751,7 @@ GameObject:
   - component: {fileID: 110017779788580163}
   - component: {fileID: 110017779788580162}
   - component: {fileID: 110017779788580161}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Hit Button (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -844,6 +850,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: OnlyInteractEnemies
+  explosion: {fileID: 8233719179907812970, guid: 649dd84f77f522c41a61b66856a9ada7,
+    type: 3}
 --- !u!1 &110017779811981885
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,8 +915,11 @@ MonoBehaviour:
   camspeed: 0.1
   leftGun: {fileID: 0}
   rightGun: {fileID: 0}
+  upGun: {fileID: 0}
+  downGun: {fileID: 0}
   leftHit: {fileID: 110017779054327713}
   rightHit: {fileID: 110017779032482501}
   leftHit2: {fileID: 110017779788580191}
   rightHit2: {fileID: 110017779706231078}
   setup: {fileID: 0}
+  skiptext: {fileID: 0}
