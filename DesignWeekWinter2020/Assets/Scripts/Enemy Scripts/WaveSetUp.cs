@@ -39,7 +39,7 @@ public class WaveSetUp : MonoBehaviour
 
     void Start()
     {
-        //InvokeRepeating("SpawnEnemyWave", 1f, spawnRate);
+        InvokeRepeating("SpawnEnemyWave", 1f, spawnRate);
     }
 
     // Update is called once per frame

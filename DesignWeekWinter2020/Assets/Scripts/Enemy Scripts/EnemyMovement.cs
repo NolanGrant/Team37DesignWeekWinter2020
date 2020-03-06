@@ -44,9 +44,10 @@ public class EnemyMovement : MonoBehaviour
     {
 
         startingPos = transform.position;
+        EndPoint = GameObject.Find("EndPoint").transform;
         Spawner = GameObject.Find("Spawner").GetComponent<WaveSetUp>();
         Spawner.IncreaseAliveEnemies();
-        EndPoint = GameObject.Find("EndPoint").transform;
+        
 
         scream = FMODUnity.RuntimeManager.CreateInstance(screamEvent);
     }
@@ -102,9 +103,18 @@ public class EnemyMovement : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+        if(collision.gameObject.layer == LayerMask.NameToLayer("LeftWeapon") || collision.gameObject.layer == LayerMask.NameToLayer("RightWeapon"))
+        {
+            Kill();
+        }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("LeftArm") || collision.gameObject.layer == LayerMask.NameToLayer("RightArm"))
+        {
+            Kill();
+        }
+
         if (collision.gameObject.layer == LayerMask.NameToLayer("OnlyInteractEnemies"))
         {
-            print("beamhit");
             Kill();
         }
     }
@@ -117,7 +127,7 @@ public class EnemyMovement : MonoBehaviour
         score.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
         score.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform);
         Score.score += 50;
-        Spawner.DecreaseAliveEnemies();
+        //Spawner.DecreaseAliveEnemies();
         Destroy(this.gameObject);
     }
 
@@ -130,9 +140,9 @@ public class EnemyMovement : MonoBehaviour
         else if (transform.position.y < EndPoint.position.y)
         {
             MainHealth.hp -= 5;
-            scream.start();
+            //scream.start();
             Destroy(this.gameObject);
-            Spawner.DecreaseAliveEnemies();
+            //Spawner.DecreaseAliveEnemies();
         }
     
     }
