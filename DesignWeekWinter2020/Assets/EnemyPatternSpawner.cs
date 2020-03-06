@@ -36,8 +36,6 @@ public class EnemyPatternSpawner : MonoBehaviour
     void Start()
     {
         SelectPatternToSpawn();
-
-
     }
 
     // Update is called once per frame
@@ -100,8 +98,6 @@ public class EnemyPatternSpawner : MonoBehaviour
             currentLevelPatternProgress += 1;
         }
 
-
-
         if (difficulty0Progression >= difficulty0Patterns.Length && canGoToLevel1 == true)
         {
             canGoToLevel1 = false;
@@ -111,7 +107,7 @@ public class EnemyPatternSpawner : MonoBehaviour
             Invoke("SelectPatternToSpawn", breakBetweenLevels);
         }
 
-        else if (currentLevelPatternProgress >= patternsToProgressDifficultyLevel[currentLevelPatternProgress])
+        else if (currentLevelPatternProgress >= patternsToProgressDifficultyLevel[currentDifficulty])
         {
             currentLevelPatternProgress = 0;
             currentDifficulty = Mathf.Clamp(currentDifficulty + 1, 0, 5);
